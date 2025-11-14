@@ -27,8 +27,14 @@ body {
   font-family: 'Inter';
 }
 
+/* Esconde cursor em elementos não-interativos */
 * {
-  cursor: none !important; /* Garante que nenhum elemento mostre cursor */
+  cursor: none !important;
+}
+
+/* EXCEÇÃO: Permite pointer events em elementos interativos */
+a, button, input, textarea, select, [role="button"] {
+  pointer-events: auto !important;
 }
 
 .nav-link {

@@ -42,7 +42,7 @@ float random(vec2 st) {
 float lines(vec2 uv, float offset){
     return smoothstep(
         0., 0.5 + offset*0.5,
-        0.5*abs((sin(uv.x*35.) + offset*2.))
+        0.5*abs((sin(uv.x*30.) + offset*2.))
     );
 }
 

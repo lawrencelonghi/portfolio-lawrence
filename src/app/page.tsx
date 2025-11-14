@@ -7,7 +7,6 @@ import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
 import { SocialLinks } from "@/components/SocialLinks";
-import { Lens } from "@/components/three/Lens";
 
 export default function Home() {
   const [camera, setCamera] = useState<THREE.PerspectiveCamera | null>(null);
@@ -40,7 +39,6 @@ export default function Home() {
       <Canvas camera={camera} dpr={dpr}>
         <Suspense fallback={null}>
           <Background/>
-          <Lens/>
         </Suspense>
       </Canvas>
   

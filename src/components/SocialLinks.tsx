@@ -9,14 +9,14 @@ export const SocialLinks = () => {
         href="https://github.com/lawrencelonghi" 
         className="nav-link"
       >
-        <Github size={'20px'} className="text-white/70 hover:scale-200 transition-allduration-300" />
+        <Github size={'20px'} className="text-white/70 hover:text-white hover:fill-white transition-colors duration-300" />
       </Link>
       <span className='text-3xl font-thin text-white/30'>|</span>
       <Link 
         href='https://www.linkedin.com/in/lawrencelonghi'
         className="nav-link"
       >
-        <Linkedin size={'20px'} className="text-white/70 hover:text-white transition-colors duration-300" />
+        <Linkedin size={'20px'} className="text-white/70 hover:text-white hover:fill-white transition-colors duration-300" />
       </Link>
     </div>
   )
