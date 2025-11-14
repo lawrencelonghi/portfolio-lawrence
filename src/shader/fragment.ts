@@ -54,10 +54,11 @@ mat2 rotate2D(float angle){
 }
 
 void main() {
-   vec3 baseFirst =  vec3(90./255., 158./255., 105./255.);  // Verde mantido
-    vec3 accent =  vec3(0., 0., 0.);                          // Preto mantido
-    vec3 baseSecond =  vec3(18./255., 18./255., 82./255.);   // Azul escuro (era laranja amarelado)
-    vec3 baseThird = vec3(15./255., 15./255., 82./255.); // Azul muito escuro (era amarelo)
+
+    vec3 baseFirst =  vec3(224./255., 148./255., 66./255.);
+    vec3 accent =  vec3(0., 0., 0.);
+    vec3 baseSecond =  vec3(120./255., 158./255., 113./255.);
+    
     float n = noise(vPosition + time);
     
     vec2 baseUV = rotate2D(n)*vPosition.xy*0.1;

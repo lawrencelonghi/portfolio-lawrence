@@ -21,7 +21,7 @@ export const Background = () => {
     shader.uniforms.time.value += 0.005;
     state.camera.position.lerp(
       v.set(state.pointer.x / 2, state.pointer.y / 2, 1.2),
-      0.07,
+      0.03,
     );
   });
 
