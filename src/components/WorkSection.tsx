@@ -39,11 +39,10 @@ const WorkSection = () => {
   }
 
   return (
-    <section ref={sectionRef} className="pb-6 container-inline">
-      {/* Portal - imagem com efeito de revelar */}
+    <section ref={sectionRef} className="pb-11 md:pb-32 container-inline">
       {hoveredWork !== null && typeof window !== 'undefined' && createPortal(
         <div 
-          className="fixed pointer-events-none z-9999 top-32 -right-52 -translate-x-1/2 overflow-hidden"
+          className="hidden md:block fixed pointer-events-none z-9999 top-12 -right-52 -translate-x-1/2 overflow-hidden"
         >
           <Image 
             src={worksData[hoveredWork].hoverImage} 
@@ -56,7 +55,7 @@ const WorkSection = () => {
         document.body
       )}
 
-      <div className="flex justify-between items-center mt-11 md:mt-56">
+      <div className="grid md:flex gap-6 text-center justify-between items-center mt-11 md:mt-56">
         <div>
           <h1 className="text-3xl md:text-5xl text-white/80 font-light text-drop-shadow-2xl inline-flex">
             {text.split('').map((char, i) => (
@@ -77,7 +76,7 @@ const WorkSection = () => {
             ))}
           </h1>
         </div>
-        <div className="flex gap-6">
+        <div className="flex gap-3 md:gap-6">
           {worksData.map((work, index) => (
             <div 
               key={work.id}
@@ -85,7 +84,7 @@ const WorkSection = () => {
               onMouseLeave={() => setHoveredWork(null)}
             >
               <Work
-                href={work.href}
+                href='/rick'
                 id={work.id}
                 title={work.title}
                 description={work.description}

@@ -26,7 +26,11 @@ export default function Home() {
   if (!camera) {
     return (
       <div className="relative h-screen w-screen flex items-center justify-center">
-        <div className="text-white">Carregando...</div>
+        <div>       
+             <h1 className="text-3xl md:text-2xl text-white/80 font-light text-drop-shadow-2xl">
+              Loading...
+              </h1>
+            </div>
       </div>
     );
   }
