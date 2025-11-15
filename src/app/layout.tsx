@@ -6,6 +6,20 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Lawrence Longhi",
   description: "Lawrence Longhi é um desenvolvedor web full stack atualmente trabalhando como freelancer",
+  openGraph: {
+    title: 'Lawrence Longhi',
+    description: 'Lawrence Longhi é um desenvolvedor web full stack brasileiro atualmente trabalhando como freelancer',
+    images: [
+      {
+        url: 'https://lawrencelonghi.vercel.app/gradient-sample.png', 
+        width: 1200,
+        height: 630, 
+        alt: 'Lawrence Longhi',
+      }
+    ],
+    url: 'https://lawrencelonghi.vercel.app',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({

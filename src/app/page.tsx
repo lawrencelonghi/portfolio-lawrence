@@ -4,7 +4,6 @@ import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Background } from "@/components/three/Background";
 import { Navbar } from "@/components/Navbar";
-import CustomCursor from "@/components/CustomCursor";
 import { SocialLinks } from "@/components/SocialLinks";
 import WorkSection from "@/components/WorkSection";
 
@@ -36,7 +35,6 @@ export default function Home() {
     <>
       {/* Seção Hero com Three.js */}
       <div className="relative h-screen w-screen">
-        <CustomCursor />
         <Canvas camera={camera} dpr={dpr}>
           <Suspense fallback={null}>
             <Background/>

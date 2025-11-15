@@ -28,19 +28,49 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  cursor: none; /* Esconde o cursor padrão */
   font-family: 'Inter';
 }
 
-/* Esconde cursor em elementos não-interativos */
-* {
-  cursor: none !important;
+.container-inline {
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
-/* EXCEÇÃO: Permite pointer events em elementos interativos */
-a, button, input, textarea, select, [role="button"] {
-  pointer-events: auto !important;
+
+
+.display-cover-img {
+  opacity: 100;
 }
+
+@keyframes reveal-left {
+  from {
+    clip-path: inset(0 0 0 100%); /* Esconde tudo pela esquerda */
+  }
+  to {
+    clip-path: inset(0 0 0 0); /* Mostra tudo */
+  }
+}
+.animate-reveal-left {
+  animation: reveal-left 0.4s ease-out;
+}
+
+@keyframes slot-spin {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(-400%);
+  }
+}
+
+.animate-slot-spin {
+  animation: slot-spin 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+}
+
 
 .nav-link {
   transition: color 0.3s ease;
