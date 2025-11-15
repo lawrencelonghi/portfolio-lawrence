@@ -1,14 +1,46 @@
 'use client'
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
+
+
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY
+
+      // se desceu → esconde
+      if (currentScroll > lastScrollY) {
+        setIsVisible(false)
+      } 
+      // se subiu → mostra
+      else {
+        setIsVisible(true)
+      }
+
+      setLastScrollY(currentScroll)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [lastScrollY])
 
   return (
     <>
-      <nav className="absolute top-12 left-32 right-32 text-[10px] flex gap-52 justify-end max-lg:left-8 max-lg:right-8 max-lg:gap-0 max-lg:justify-between max-lg:items-center">
-        {/* Desktop Menu - Language */}
+      <nav
+        className={`
+          fixed top-0 left-0 right-0 z-50 px-32 py-12 text-[10px]
+          flex gap-52 justify-end 
+          max-lg:px-8 max-lg:gap-0 max-lg:justify-between max-lg:items-center
+          transition-transform duration-300
+          ${isVisible ? "translate-y-0" : "-translate-y-full"}
+        `}
+      >
+
         <div className="flex tracking-wide text-white/50 gap-6 max-lg:hidden">
           <span className="text-white font-extrabold">I</span>
           <Link href='#' className="nav-link">PT</Link>
@@ -18,8 +50,8 @@ export const Navbar = () => {
 
         {/* Desktop Menu - Navigation */}
         <div className="flex tracking-wide text-white/50 gap-8 max-lg:hidden">
-          <Link href='#' className="nav-link">WORK.</Link>
-          <Link href='#' className="nav-link">ABOUT.</Link>
+          <Link href='#work' className="nav-link">WORK.</Link>
+          <Link href='#about' className="nav-link">ABOUT.</Link>
           <Link href='#' className="nav-link">CONTACT.</Link>
         </div>
 

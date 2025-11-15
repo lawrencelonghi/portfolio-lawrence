@@ -6,6 +6,7 @@ import { Background } from "@/components/three/Background";
 import { Navbar } from "@/components/Navbar";
 import { SocialLinks } from "@/components/SocialLinks";
 import WorkSection from "@/components/WorkSection";
+import AboutSection from "@/components/AboutSection";
 
 export default function Home() {
   const [camera, setCamera] = useState<THREE.PerspectiveCamera | null>(null);
@@ -57,7 +58,6 @@ export default function Home() {
           }}
         />
     
-        <Navbar/>
         
         <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
           <div className="text-center items-center justify-center flex mt-5 flex-col gap-5">
@@ -71,6 +71,7 @@ export default function Home() {
           </div>
         </div>
         <WorkSection/>
+        <AboutSection/>
       </div>
 
 

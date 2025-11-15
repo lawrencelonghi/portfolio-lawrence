@@ -23,7 +23,7 @@ const WorkSection = () => {
           }
         })
       },
-      { threshold: 0.3 } // Ativa quando 30% da seção está visível
+      { threshold: 0.3 } 
     )
 
     if (sectionRef.current) {
@@ -39,21 +39,8 @@ const WorkSection = () => {
   }
 
   return (
-    <section ref={sectionRef} className="pb-11 md:pb-32 md:container-inline">
-      {hoveredWork !== null && typeof window !== 'undefined' && createPortal(
-        <div 
-          className="hidden md:block fixed pointer-events-none z-9999 top-12 -right-52 -translate-x-1/2 overflow-hidden"
-        >
-          <Image 
-            src={worksData[hoveredWork].hoverImage} 
-            alt={worksData[hoveredWork].description} 
-            width={1200} 
-            height={600} 
-            className="object-fit rounded-xs border border-amber-50 w-[600px] h-[300px] animate-reveal-left origin-right" 
-          />
-        </div>,
-        document.body
-      )}
+    <section id="work" ref={sectionRef} className="pb-11 md:pb-32 md:container-inline">
+ 
 
       <div className="grid md:flex md:ml-24 md:mr-24 gap-6 text-center justify-center md:justify-between items-center mt-11 md:mt-56">
         <div>
@@ -77,11 +64,26 @@ const WorkSection = () => {
           </h1>
         </div>
         <div className="flex gap-3 md:gap-6">
+          {hoveredWork !== null && typeof window !== 'undefined' && createPortal(
+            <div 
+              className="hidden md:block fixed pointer-events-none z-9999 top-12 -right-52 -translate-x-1/2 overflow-hidden"
+            >
+              <Image 
+                src={worksData[hoveredWork].hoverImage} 
+                alt={worksData[hoveredWork].description} 
+                width={1200} 
+                height={600} 
+                className="object-fit rounded-lg w-[600px] h-[300px] animate-reveal-left origin-right" 
+              />
+            </div>,
+            document.body
+          )}
           {worksData.map((work, index) => (
             <div 
               key={work.id}
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={() => setHoveredWork(null)}
+              className="flex"
             >
               <Work
                 href='/rick'

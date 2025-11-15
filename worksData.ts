@@ -24,6 +24,6 @@ export const worksData = [
     "title": "samambaiabar.com.br",
     "description": "Um cardápio online desenvolvido apenas com HTML, CSS, JavaScript e Django",
     "image": "/imgs/drink-sour.jpg",
-    "hoverImage": "/imgs/samambaia-img.png"
+    "hoverImage": "/imgs/samambaia-nv.png"
   }
 ]
