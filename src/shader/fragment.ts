@@ -55,9 +55,10 @@ mat2 rotate2D(float angle){
 
 void main() {
 
-    vec3 baseFirst =  vec3(224./255., 148./255., 66./255.);
+    // Cores mais escuras (reduzindo os valores RGB)
+    vec3 baseFirst =  vec3(140./255., 92./255., 41./255.);  // Laranja mais escuro
     vec3 accent =  vec3(0., 0., 0.);
-    vec3 baseSecond =  vec3(120./255., 158./255., 113./255.);
+    vec3 baseSecond =  vec3(75./255., 98./255., 70./255.);  // Verde mais escuro
     
     float n = noise(vPosition + time);
     
@@ -69,8 +70,11 @@ void main() {
     vec3 secondBaseColor = mix(baseColor, accent, secondPattern);
 
     // Adiciona o granulado estático
-    float grain = random(vPosition.xy) * 0.1; // 0.15 controla a intensidade
+    float grain = random(vPosition.xy) * 0.1;
     vec3 finalColor = secondBaseColor + grain;
+
+    // Aplica um fator de escurecimento geral
+    finalColor *= 0.9;  // Reduz o brilho geral em 30%
 
     gl_FragColor = vec4(finalColor, 1.0);
 }`;

@@ -3,17 +3,16 @@ import * as THREE from "three";
 import { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Background } from "@/components/three/Background";
-import Image from "next/image";
 import { Navbar } from "@/components/Navbar";
 import CustomCursor from "@/components/CustomCursor";
 import { SocialLinks } from "@/components/SocialLinks";
+import WorkSection from "@/components/WorkSection";
 
 export default function Home() {
   const [camera, setCamera] = useState<THREE.PerspectiveCamera | null>(null);
   const [dpr, setDpr] = useState(1);
 
   useEffect(() => {
-    // Esta função só roda no cliente
     const newCamera = new THREE.PerspectiveCamera(
       70,
       window.innerWidth / window.innerHeight,
@@ -34,27 +33,45 @@ export default function Home() {
   }
 
   return (
-    <div className="relative h-screen w-screen">
-      <CustomCursor />
-      <Canvas camera={camera} dpr={dpr}>
-        <Suspense fallback={null}>
-          <Background/>
-        </Suspense>
-      </Canvas>
-  
-      <Navbar/>
-      
-      <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-        <div className="text-center items-center justify-center flex mt-5 flex-col gap-5 ">
-          <h1 className="text-3xl md:text-5xl text-white/70 font-light text-drop-shadow-2xl">
-            LAWRENCE LONGHI
-          </h1>
-          <p className="text-xl md:text-2xl text-white/50 font-light drop-shadow-lg">
-            Full Stack Developer
-          </p>
-          <SocialLinks/>
+    <>
+      {/* Seção Hero com Three.js */}
+      <div className="relative h-screen w-screen">
+        <CustomCursor />
+        <Canvas camera={camera} dpr={dpr}>
+          <Suspense fallback={null}>
+            <Background/>
+          </Suspense>
+        </Canvas>
+
+        {/* Overlay de blur na parte inferior */}
+        <div 
+          className="absolute bottom-0 left-0 right-0 pointer-events-none"
+          style={{
+            height: '40px', // Ajuste a altura conforme necessário
+            background: 'linear-gradient(0deg, #0a0a0a 0%, #0a0a0a 10%, #0a0a0a 10%, rgba(10, 10, 10, 0) 100%)',
+            opacity: '1',
+            backdropFilter: 'blur(0.5px)',
+            WebkitBackdropFilter: 'blur(0.5px)'
+          }}
+        />
+    
+        <Navbar/>
+        
+        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+          <div className="text-center items-center justify-center flex mt-5 flex-col gap-5">
+            <h1 className="text-3xl md:text-5xl text-white/80 font-light text-drop-shadow-2xl">
+              LAWRENCE LONGHI
+            </h1>
+            <p className="text-xl md:text-2xl text-white/50 font-light drop-shadow-lg">
+              Full Stack Developer
+            </p>
+            <SocialLinks/>
+          </div>
         </div>
+        <WorkSection/>
       </div>
-    </div>
+
+
+    </>
   );
 }
