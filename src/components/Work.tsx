@@ -23,7 +23,7 @@ const Work = (work: {id: number, title: string, description: string, image: stri
               alt={work.description}
               width={500}
               height={500}
-              className="object-cover rounded-xs border border-amber-50 w-36 h-36"
+              className="object-cover rounded-xs border border-amber-50 w-26 h-26 md:w-36 md:h-36"
           />
           </Link>
       </div>

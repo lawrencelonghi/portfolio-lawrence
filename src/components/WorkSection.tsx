@@ -39,7 +39,7 @@ const WorkSection = () => {
   }
 
   return (
-    <section ref={sectionRef} className="pb-11 md:pb-32 container-inline">
+    <section ref={sectionRef} className="pb-11 md:pb-32 md:container-inline">
       {hoveredWork !== null && typeof window !== 'undefined' && createPortal(
         <div 
           className="hidden md:block fixed pointer-events-none z-9999 top-12 -right-52 -translate-x-1/2 overflow-hidden"
@@ -55,7 +55,7 @@ const WorkSection = () => {
         document.body
       )}
 
-      <div className="grid md:flex gap-6 text-center justify-between items-center mt-11 md:mt-56">
+      <div className="grid md:flex md:ml-24 md:mr-24 gap-6 text-center justify-center md:justify-between items-center mt-11 md:mt-56">
         <div>
           <h1 className="text-3xl md:text-5xl text-white/80 font-light text-drop-shadow-2xl inline-flex">
             {text.split('').map((char, i) => (
