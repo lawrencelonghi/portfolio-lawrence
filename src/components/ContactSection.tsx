@@ -6,24 +6,22 @@ import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const AboutSection = () => {
+const ContactSection = () => {
   const { t } = useLanguage();
   const titleRef = useRef<HTMLHeadingElement>(null);
-  const paragraphContainerRef = useRef<HTMLDivElement>(null);
-  const lastTitleAnimationTime = useRef<number>(0);
+    const lineRef = useRef<HTMLHRElement>(null);
   
-  // Array de parágrafos separados
-  const paragraphs = [t.aboutText1, t.aboutText2, t.aboutText3];
+  const lastAnimationTime = useRef<number>(0);
   
   // Alfabeto para o efeito de embaralhamento
   const alphabet = "";
 
-  // Animação do título
+  // animação do titulo
   useGSAP(() => {
     if (!titleRef.current) return;
 
     const chars = Array.from(titleRef.current.children);
-    const finalText = t.about;
+    const finalText = t.contact;
 
     gsap.timeline({
       scrollTrigger: {
@@ -31,115 +29,106 @@ const AboutSection = () => {
         start: "top 80%",
         onEnter: () => {
           const now = Date.now();
-          const timeSinceLastAnimation = now - lastTitleAnimationTime.current;
+          const timeSinceLastAnimation = now - lastAnimationTime.current;
           
-          if (timeSinceLastAnimation < 10000 && lastTitleAnimationTime.current !== 0) {
+          if (timeSinceLastAnimation < 10000 && lastAnimationTime.current !== 0) {
             chars.forEach((char, i) => {
               char.textContent = finalText[i];
             });
             return;
           }
           
-          lastTitleAnimationTime.current = now;
+          lastAnimationTime.current = now;
           
+          // Embaralha TODAS as letras simultaneamente
           let frame = 0;
-          const maxFrames = 40;
+          const maxFrames = 40; // Total de frames de embaralhamento
           
           const scrambleInterval = setInterval(() => {
             frame++;
             
             chars.forEach((char, index) => {
+              // Cada letra para de embaralhar progressivamente
               const stopFrame = Math.floor((index / chars.length) * maxFrames);
               
               if (frame <= stopFrame + 20) {
+                // Ainda embaralhando
                 const randomLetter = alphabet[Math.floor(Math.random() * alphabet.length)];
                 char.textContent = randomLetter;
               } else {
+                // Mostra letra final
                 char.textContent = finalText[index];
               }
             });
             
+            // Para quando todas as letras estiverem finalizadas
             if (frame >= maxFrames + 20) {
               clearInterval(scrambleInterval);
+              // Garante que todas as letras estão corretas
               chars.forEach((char, i) => {
                 char.textContent = finalText[i];
               });
             }
-          }, 18);
+          }, 18); // 30ms entre cada frame
         }
       }
     });
-  }, [t.about]);
+  }, [t.contact]);
 
-  // Animação dos parágrafos - revelação de cor por scroll
-  useGSAP(() => {
-    if (!paragraphContainerRef.current) return;
+  //animacao da linha hr
+   useGSAP(() => {
+    if (!lineRef.current) return;
 
-    // Seleciona todos os spans de todos os parágrafos
-    const allChars = paragraphContainerRef.current.querySelectorAll(".char");
+
 
     gsap.fromTo(
-      allChars,
+      lineRef.current,
       {
-        color: "rgba(255, 255, 255, 0.3)",
+       width: "0px",
       },
       {
-        color: "rgba(255, 255, 255, 1)",
+        width: "100%",
         stagger: {
           each: 0.02,
           from: "start"
         },
         ease: "none",
         scrollTrigger: {
-          trigger: paragraphContainerRef.current,
-          start: "top 150%",
-          end: "bottom 30%",
+          trigger: lineRef.current,
+          start: "top 100%",
+          end: "bottom 100%",
           scrub: 1,
         }
       }
     );
-  }, [paragraphs]);
+  }, [lineRef.current]);
 
   return (
-    <section id="about" className="ml-5 mr-5 md:ml-26 md:mr-24 pb-20">
+    <section id="contact" className="ml-5 mr-5 md:ml-26 md:mr-24  pb-36">
       <div>
-        <hr className="text-white/20 h-[0.2px]" />
+        <hr ref={lineRef} className="text-white/20 h-[0.2px]" />
       </div>
 
-      <div className="mt-11 md:mt-40 grid text-center md:items-center gap-8 md:flex justify-center md:justify-between">
+      <div className=" mt-18 md:mt-40 grid text-center md:items-center gap-12 md:flex justify-center md:justify-between">
         <h1 
           ref={titleRef}
           className="text-3xl md:text-5xl text-white/80 font-light"
-          style={{ letterSpacing: '-0.02em' }}
         >
-          {t.about.split("").map((char, i) => (
+          {t.contact.split("").map((char, i) => (
             <span key={i} className="inline-block">
               {char === " " ? "\u00A0" : char}
             </span>
           ))}
         </h1>
 
-        <div ref={paragraphContainerRef} className="relative max-w-lg">
-          {paragraphs.map((paragraph, pIndex) => (
-            <p 
-              key={pIndex}
-              className="text-sm text-left md:pl-8 font-extralight mb-4 last:mb-0"
-            >
-              {paragraph.split(" ").map((word, wIndex) => (
-                <span key={wIndex} className="inline-block whitespace-nowrap mr-[0.25em]">
-                  {word.split("").map((char, cIndex) => (
-                    <span key={cIndex} className="char" style={{ display: "inline" }}>
-                      {char}
-                    </span>
-                  ))}
-                </span>
-              ))}
-            </p>
-          ))}
+        <div className=" flex gap-8 md:mr-50 mb-5 justify-center text-center">
+          <span className="text-sm text-center justify-baseline font-light text-white/50">
+            lawrencelonghi@proton.me
+          </span>
         </div>
       </div>
     </section>
   );
 };
 
-export default AboutSection;
+export default ContactSection;

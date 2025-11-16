@@ -8,6 +8,7 @@ import { SocialLinks } from "@/components/SocialLinks";
 import WorkSection from "@/components/WorkSection";
 import AboutSection from "@/components/AboutSection";
 import { useLanguage } from "@/contexts/LanguageContext";
+import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
   const [camera, setCamera] = useState<THREE.PerspectiveCamera | null>(null);
@@ -72,6 +73,7 @@ export default function Home() {
         <div className="flex flex-col gap-16 mt-12">
           <WorkSection/>
           <AboutSection/>
+          <ContactSection/>
         </div>
       </div>
     </>

@@ -70,7 +70,6 @@ body {
 
 .animate-slot-spin {
   animation: slot-spin 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  
 }
 
 
@@ -106,3 +105,4 @@ margin-right: 15px;
 ::-webkit-scrollbar-thumb:hover {
   background: #777;
 }
+
