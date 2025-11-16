@@ -9,8 +9,10 @@ const WorkSection = () => {
   const [hoveredWork, setHoveredWork] = useState<number | null>(null)
   const [animationKey, setAnimationKey] = useState(0)
   const [hasAnimated, setHasAnimated] = useState(false)
+  const [hoverPosition, setHoverPosition] = useState({ top: 0, left: 0 })
   const sectionRef = useRef<HTMLElement>(null)
-  const text = "PROJECTS"
+  const worksContainerRef = useRef<HTMLDivElement>(null)
+  const text = "PROJETOS"
 
   // Anima quando a seção entra na viewport
   useEffect(() => {
@@ -33,16 +35,47 @@ const WorkSection = () => {
     return () => observer.disconnect()
   }, [hasAnimated])
 
+  // Atualiza a posição da imagem hover quando o usuário faz scroll
+  useEffect(() => {
+    const updateHoverPosition = () => {
+      if (worksContainerRef.current && hoveredWork !== null) {
+        const rect = worksContainerRef.current.getBoundingClientRect()
+        setHoverPosition({
+          top: rect.top,
+          left: rect.left
+        })
+      }
+    }
+
+    if (hoveredWork !== null) {
+      updateHoverPosition()
+      window.addEventListener('scroll', updateHoverPosition)
+      window.addEventListener('resize', updateHoverPosition)
+    }
+
+    return () => {
+      window.removeEventListener('scroll', updateHoverPosition)
+      window.removeEventListener('resize', updateHoverPosition)
+    }
+  }, [hoveredWork])
+
   const handleMouseEnter = (index: number) => {
     setHoveredWork(index)
     setAnimationKey(prev => prev + 1)
+    
+    // Calcula a posição inicial
+    if (worksContainerRef.current) {
+      const rect = worksContainerRef.current.getBoundingClientRect()
+      setHoverPosition({
+        top: rect.top,
+        left: rect.left
+      })
+    }
   }
 
   return (
     <section id="work" ref={sectionRef} className="pb-11 md:pb-32 md:container-inline">
- 
-
-      <div className="grid md:flex md:ml-24 md:mr-24 gap-6 text-center justify-center md:justify-between items-center mt-11 md:mt-56">
+      <div className="grid md:flex md:ml-24 md:mr-24 gap-18 text-center justify-center md:justify-between items-center mt-12 md:mt-56">
         <div>
           <h1 className="text-3xl md:text-5xl text-white/80 font-light text-drop-shadow-2xl inline-flex">
             {text.split('').map((char, i) => (
@@ -63,10 +96,15 @@ const WorkSection = () => {
             ))}
           </h1>
         </div>
-        <div className="flex gap-3 md:gap-6">
+        
+        <div ref={worksContainerRef} className="flex gap-3 md:gap-6">
           {hoveredWork !== null && typeof window !== 'undefined' && createPortal(
             <div 
-              className="hidden md:block fixed pointer-events-none z-9999 top-12 -right-52 -translate-x-1/2 overflow-hidden"
+              className="hidden md:block fixed pointer-events-none z-[9999] overflow-hidden"
+              style={{
+                top: `${hoverPosition.top - 320}px`,
+                left: `${hoverPosition.left - 70}px`,
+              }}
             >
               <Image 
                 src={worksData[hoveredWork].hoverImage} 
@@ -78,6 +116,7 @@ const WorkSection = () => {
             </div>,
             document.body
           )}
+          
           {worksData.map((work, index) => (
             <div 
               key={work.id}

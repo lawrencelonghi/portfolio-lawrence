@@ -59,19 +59,21 @@ export default function Home() {
         />
     
         
-        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+        <div className="absolute inset-0 flex flex-col  items-center justify-center pointer-events-none">
           <div className="text-center items-center justify-center flex mt-5 flex-col gap-5">
             <h1 className="text-3xl md:text-5xl text-white/80 font-light text-drop-shadow-2xl">
               LAWRENCE LONGHI
             </h1>
             <p className="text-xl md:text-2xl text-white/50 font-light drop-shadow-lg">
-              Full Stack Developer
+              Desenvolvedor Full Stack
             </p>
             <SocialLinks/>
           </div>
         </div>
+        <div className="flex flex-col gap-16 mt-12">
         <WorkSection/>
         <AboutSection/>
+        </div>
       </div>
 
 

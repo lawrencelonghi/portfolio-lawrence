@@ -55,11 +55,10 @@ mat2 rotate2D(float angle){
 
 void main() {
 
-    // Cores mais escuras (reduzindo os valores RGB)
-    vec3 baseFirst =  vec3(140./255., 92./255., 41./255.);  // Laranja mais escuro
+    vec3 baseFirst =  vec3(15./255., 60./255., 35./255.);  // Verde esmeralda escuro
     vec3 accent =  vec3(0., 0., 0.);
-    vec3 baseSecond =  vec3(75./255., 98./255., 70./255.);  // Verde mais escuro
-    
+    vec3 baseSecond =  vec3(20./255., 25./255., 55./255.);
+
     float n = noise(vPosition + time);
     
     vec2 baseUV = rotate2D(n)*vPosition.xy*0.1;

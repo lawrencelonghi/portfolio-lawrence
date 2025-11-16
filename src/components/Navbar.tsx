@@ -50,9 +50,9 @@ export const Navbar = () => {
 
         {/* Desktop Menu - Navigation */}
         <div className="flex tracking-wide text-white/50 gap-8 max-lg:hidden">
-          <Link href='#work' className="nav-link">WORK.</Link>
-          <Link href='#about' className="nav-link">ABOUT.</Link>
-          <Link href='#' className="nav-link">CONTACT.</Link>
+          <Link href='#work' className="nav-link">PROJETOS.</Link>
+          <Link href='#about' className="nav-link">SOBRE MIM.</Link>
+          <Link href='#' className="nav-link">CONTATO.</Link>
         </div>
 
         {/* Hamburger Button - Mobile Only */}
@@ -84,19 +84,19 @@ export const Navbar = () => {
                   className={`nav-link transition-all duration-500 ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}
                   style={{ transitionDelay: isOpen ? '450ms' : '0ms' }}
                   onClick={() => setIsOpen(false)}>
-              WORK.
+              PROJETOS
             </Link>
             <Link href='#' 
                   className={`nav-link transition-all duration-500 ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}
                   style={{ transitionDelay: isOpen ? '600ms' : '0ms' }}
                   onClick={() => setIsOpen(false)}>
-              ABOUT.
+              SOBRE MIM
             </Link>
             <Link href='#' 
                   className={`nav-link transition-all duration-500 ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'}`}
                   style={{ transitionDelay: isOpen ? '750ms' : '0ms' }}
                   onClick={() => setIsOpen(false)}>
-              CONTACT.
+              CONTATO
             </Link>
           </div>
         </div>
