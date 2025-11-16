@@ -9,12 +9,12 @@ gsap.registerPlugin(ScrollTrigger);
 const ContactSection = () => {
   const { t } = useLanguage();
   const titleRef = useRef<HTMLHeadingElement>(null);
-    const lineRef = useRef<HTMLHRElement>(null);
+  const lineRef = useRef<HTMLHRElement>(null);
   
   const lastAnimationTime = useRef<number>(0);
   
   // Alfabeto para o efeito de embaralhamento
-  const alphabet = "";
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   // animação do titulo
   useGSAP(() => {
@@ -76,37 +76,33 @@ const ContactSection = () => {
   }, [t.contact]);
 
   //animacao da linha hr
-   useGSAP(() => {
-    if (!lineRef.current) return;
+useGSAP(() => {
+  if (!lineRef.current) return;
 
-
-
-    gsap.fromTo(
-      lineRef.current,
-      {
-       width: "0px",
-      },
-      {
-        width: "100%",
-        stagger: {
-          each: 0.02,
-          from: "start"
-        },
-        ease: "none",
-        scrollTrigger: {
-          trigger: lineRef.current,
-          start: "top 100%",
-          end: "bottom 100%",
-          scrub: 1,
-        }
+  gsap.fromTo(
+    lineRef.current,
+    {
+      scaleX: 0,
+      transformOrigin: "right center"
+    },
+    {
+      scaleX: 1,
+      transformOrigin: "right center",
+      ease: "none",
+      scrollTrigger: {
+        trigger: lineRef.current,
+        start: "top 90%",
+        end: "bottom 90%",
+        scrub: 1,
       }
-    );
-  }, [lineRef.current]);
+    }
+  );
+}, []);
 
   return (
     <section id="contact" className="ml-5 mr-5 md:ml-26 md:mr-24  pb-36">
       <div>
-        <hr ref={lineRef} className="text-white/20 h-[0.2px]" />
+        <hr ref={lineRef} className="text-white/20 h-[0.2px] " />
       </div>
 
       <div className=" mt-18 md:mt-40 grid text-center md:items-center gap-12 md:flex justify-center md:justify-between">

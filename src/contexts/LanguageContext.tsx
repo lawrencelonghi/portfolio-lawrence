@@ -20,7 +20,7 @@ const translations: Translations = {
   pt: {
     developer: 'Desenvolvedor Full Stack',
     projects: 'PROJETOS',
-    about: 'SOBRE MIM',
+    about: 'SOBRE',
     contact: 'CONTATO',
     aboutText1: 'Sou músico, pianista e professor de piano, atualmente em transição de carreira para a área de desenvolvimento de software.',
     aboutText2: 'No último ano, além da dedicação ao ensino e à música, tenho estudado programação e já realizei dois projetos como freelancer, o que me proporcionou a oportunidade de pôr em prática meus conhecimentos como desenvolvedor.',

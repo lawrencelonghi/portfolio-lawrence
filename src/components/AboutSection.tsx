@@ -8,6 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const AboutSection = () => {
   const { t } = useLanguage();
+  const lineRef = useRef<HTMLHRElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const paragraphContainerRef = useRef<HTMLDivElement>(null);
   const lastTitleAnimationTime = useRef<number>(0);
@@ -16,7 +17,7 @@ const AboutSection = () => {
   const paragraphs = [t.aboutText1, t.aboutText2, t.aboutText3];
   
   // Alfabeto para o efeito de embaralhamento
-  const alphabet = "";
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
   // Animação do título
   useGSAP(() => {
@@ -92,18 +93,44 @@ const AboutSection = () => {
         ease: "none",
         scrollTrigger: {
           trigger: paragraphContainerRef.current,
-          start: "top 150%",
-          end: "bottom 30%",
+          start: "top 90%",
+          end: "top 40%",
           scrub: 1,
         }
       }
     );
   }, [paragraphs]);
 
+  //animacao hr
+  useGSAP(() => {
+         gsap.fromTo(
+      lineRef.current,
+      {
+        width: "0px",
+      },
+      {
+        width: "100%",
+        stagger: {
+          each: 0.02,
+          from: "start"
+        },
+        ease: "none",
+        scrollTrigger: {
+          trigger: lineRef.current,
+          start: "top 100%",
+          end: "bottom 90%",
+          scrub: 1,
+        }
+      }
+    );
+  }, [lineRef.current]);
+  
+ 
+
   return (
     <section id="about" className="ml-5 mr-5 md:ml-26 md:mr-24 pb-20">
       <div>
-        <hr className="text-white/20 h-[0.2px]" />
+        <hr ref={lineRef} className="text-white/20 h-[0.2px]" />
       </div>
 
       <div className="mt-11 md:mt-40 grid text-center md:items-center gap-8 md:flex justify-center md:justify-between">

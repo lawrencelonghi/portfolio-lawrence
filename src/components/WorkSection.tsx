@@ -7,12 +7,18 @@ import { useState, useEffect, useRef } from "react"
 import { createPortal } from "react-dom"
 import { useLanguage } from "@/contexts/LanguageContext"
 
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 const WorkSection = () => {
   const [hoveredWork, setHoveredWork] = useState<number | null>(null)
   const [animationKey, setAnimationKey] = useState(0)
   const [hasAnimated, setHasAnimated] = useState(false)
   const [hoverPosition, setHoverPosition] = useState({ top: 0, left: 0 })
   const sectionRef = useRef<HTMLElement>(null)
+  const lineRef = useRef<HTMLHRElement>(null);
+
   const worksContainerRef = useRef<HTMLDivElement>(null)
   const { t } = useLanguage()
 
@@ -26,7 +32,7 @@ const WorkSection = () => {
           }
         })
       },
-      { threshold: 0.3 } 
+      { threshold: 0.7 } 
     )
 
     if (sectionRef.current) {
@@ -66,11 +72,12 @@ const WorkSection = () => {
     if (worksContainerRef.current) {
       const rect = worksContainerRef.current.getBoundingClientRect()
       setHoverPosition({
-        top: rect.top,
+        top: rect.top ,
         left: rect.left
       })
     }
   }
+
 
   return (
     <section id="work" ref={sectionRef} className="pb-11 md:pb-32 md:container-inline">
@@ -99,7 +106,7 @@ const WorkSection = () => {
         <div ref={worksContainerRef} className="flex gap-3 md:gap-6">
           {hoveredWork !== null && typeof window !== 'undefined' && createPortal(
             <div 
-              className="hidden md:block fixed pointer-events-none z-[9999] overflow-hidden"
+              className="hidden md:block fixed pointer-events-none z-9999 overflow-hidden"
               style={{
                 top: `${hoverPosition.top - 320}px`,
                 left: `${hoverPosition.left - 70}px`,
