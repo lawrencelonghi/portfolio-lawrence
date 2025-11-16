@@ -1,4 +1,6 @@
+// src/components/AboutSection.tsx
 import { useEffect, useRef, useState } from "react"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 const AboutSection = () => {
     const [isVisible, setIsVisible] = useState(false)
@@ -6,7 +8,7 @@ const AboutSection = () => {
     const [hasAnimated, setHasAnimated] = useState(false)
     const sectionRef = useRef<HTMLElement>(null)
     const paragraphRef = useRef<HTMLParagraphElement>(null)
-    const text = "SOBRE MIM"
+    const { t } = useLanguage()
 
     useEffect(() => {
       const observer = new IntersectionObserver(
@@ -33,18 +35,10 @@ const AboutSection = () => {
         if (paragraphRef.current) {
           const rect = paragraphRef.current.getBoundingClientRect()
           const windowHeight = window.innerHeight
-          
-          // Altura de referência (ponto onde o texto fica branco)
-          const threshold = windowHeight * 0.7// 50% da altura da tela
-          
-          // Posição do topo do parágrafo
+          const threshold = windowHeight * 0.7
           const elementTop = rect.top
           const elementHeight = rect.height
-          
-          // Calcula quantos pixels já passaram pelo threshold
           const pixelsPassed = threshold - elementTop
-          
-          // Progresso de 0 até o height total do elemento
           const progress = Math.min(Math.max(pixelsPassed, 0), elementHeight)
           
           setScrollProgress(progress)
@@ -65,7 +59,7 @@ const AboutSection = () => {
 
         <div className="mt-11 md:mt-40 grid text-center md:items-center gap-8 md:flex justify-center md:justify-between">
           <h1 className="text-3xl md:text-5xl text-white/80 font-light" style={{ letterSpacing: '-0.02em' }}>
-            {text.split('').map((char, i) => (
+            {t.about.split('').map((char, i) => (
               <span 
                 key={i} 
                 className="overflow-hidden inline-block align-bottom" 
@@ -100,9 +94,9 @@ const AboutSection = () => {
               ref={paragraphRef}
               className="text-sm text-center md:text-left md:pl-8 font-light flex-wrap text-white/50"
             >
-              Sou músico, pianista e professor de piano, atualmente em transição de carreira para a área de desenvolvimento de software. <br></br><br></br>
-              No último ano, além da dedicação ao ensino e à música, tenho estudado programação e já realizei dois projetos como freelancer, o que me proprocionou a oportunidade de por em prática meus conhecimentos como desenvolvedor.<br></br><br></br>
-              Minha trajetória na música me trouxe disciplina, foco e criatividade - qualidades que agora aplico no desenvolvimento.
+              {t.aboutText1}<br></br><br></br>
+              {t.aboutText2}<br></br><br></br>
+              {t.aboutText3}
             </p>
             
             <p 
@@ -111,9 +105,9 @@ const AboutSection = () => {
                 clipPath: `inset(0 0 ${paragraphRef.current ? paragraphRef.current.offsetHeight - scrollProgress : 100}px 0)`
               }}
             >
-              Sou músico, pianista e professor de piano, atualmente em transição de carreira para a área de desenvolvimento de software. <br></br><br></br>
-              No último ano, além da dedicação ao ensino e à música, tenho estudado programação e já realizei dois projetos como freelancer, o que me proprocionou a oportunidade de por em prática meus conhecimentos como desenvolvedor.<br></br><br></br>
-              Minha trajetória na música me trouxe disciplina, foco e criatividade - qualidades que agora aplico no desenvolvimento.
+              {t.aboutText1}<br></br><br></br>
+              {t.aboutText2}<br></br><br></br>
+              {t.aboutText3}
             </p>
           </div>
         </div>

@@ -55,7 +55,7 @@ mat2 rotate2D(float angle){
 
 void main() {
 
-    vec3 baseFirst =  vec3(15./255., 60./255., 35./255.);  // Verde esmeralda escuro
+    vec3 baseFirst =  vec3(20./255., 60./255., 35./255.);  // Verde esmeralda escuro
     vec3 accent =  vec3(0., 0., 0.);
     vec3 baseSecond =  vec3(20./255., 25./255., 55./255.);
 

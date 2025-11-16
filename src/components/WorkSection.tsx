@@ -1,9 +1,11 @@
+// src/components/WorkSection.tsx
 'use client'
 import Work from "./Work"
 import { worksData } from "../../worksData"
 import Image from "next/image"
 import { useState, useEffect, useRef } from "react"
 import { createPortal } from "react-dom"
+import { useLanguage } from "@/contexts/LanguageContext"
 
 const WorkSection = () => {
   const [hoveredWork, setHoveredWork] = useState<number | null>(null)
@@ -12,9 +14,8 @@ const WorkSection = () => {
   const [hoverPosition, setHoverPosition] = useState({ top: 0, left: 0 })
   const sectionRef = useRef<HTMLElement>(null)
   const worksContainerRef = useRef<HTMLDivElement>(null)
-  const text = "PROJETOS"
+  const { t } = useLanguage()
 
-  // Anima quando a seção entra na viewport
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -35,7 +36,6 @@ const WorkSection = () => {
     return () => observer.disconnect()
   }, [hasAnimated])
 
-  // Atualiza a posição da imagem hover quando o usuário faz scroll
   useEffect(() => {
     const updateHoverPosition = () => {
       if (worksContainerRef.current && hoveredWork !== null) {
@@ -63,7 +63,6 @@ const WorkSection = () => {
     setHoveredWork(index)
     setAnimationKey(prev => prev + 1)
     
-    // Calcula a posição inicial
     if (worksContainerRef.current) {
       const rect = worksContainerRef.current.getBoundingClientRect()
       setHoverPosition({
@@ -78,7 +77,7 @@ const WorkSection = () => {
       <div className="grid md:flex md:ml-24 md:mr-24 gap-18 text-center justify-center md:justify-between items-center mt-12 md:mt-56">
         <div>
           <h1 className="text-3xl md:text-5xl text-white/80 font-light text-drop-shadow-2xl inline-flex">
-            {text.split('').map((char, i) => (
+            {t.projects.split('').map((char, i) => (
               <div key={`${i}-${animationKey}`} className="overflow-hidden inline-block" style={{ height: '1.2em' }}>
                 <div 
                   className="animate-slot-spin"
