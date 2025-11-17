@@ -1,11 +1,11 @@
 'use client'
 import * as THREE from "three";
 import { Sphere } from "@react-three/drei";
-import { fragment } from "@/shader/fragment"
+import { footerFragment } from "@/shader/footerFragment";
 import { vertex } from "@/shader/vertex";
 import { useFrame } from "@react-three/fiber";
 
-export const Background = () => {
+export const BackgroundFooter = () => {
   const shader = {
     side: THREE.DoubleSide,
     uniforms: {
@@ -13,7 +13,7 @@ export const Background = () => {
       resolution: { value: new THREE.Vector4() },
     },
     vertexShader: vertex,
-    fragmentShader: fragment,
+    fragmentShader: footerFragment,
   };
 
   const v = new THREE.Vector3();

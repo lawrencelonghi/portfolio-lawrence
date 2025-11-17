@@ -131,7 +131,7 @@ const WorkSection = () => {
               className="flex"
             >
               <Work
-                href='/rick'
+                href={work.hrefEx}
                 id={work.id}
                 title={work.title}
                 description={work.description}
