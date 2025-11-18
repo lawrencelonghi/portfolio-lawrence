@@ -1,20 +1,22 @@
 import Image from "next/image"
 import Link from "next/link"
+
 const Work = (work: {id: number, title: string, description: string, image: string, href: string}) => {
   return (
-
-
-        <div className="flex flex-col items-center opacity-35 hover:opacity-100 ease-in-out duration-400 gap-3">
-          <Link href={work.href}>
-            <Image
-              src={work.image}
-              alt={work.description}
-              width={500}
-              height={500}
-              className="object-cover rounded-xs border border-amber-50 w-26 h-26 md:w-36 md:h-36"
+    <div className="flex flex-col opacity-50 hover:opacity-100 duration-300 gap-3">
+      <Link href={work.href} className="block w-full">
+        <div className="relative w-full aspect-square overflow-hidden rounded-xs">
+          <Image
+            src={work.image}
+            alt={work.description}
+            fill
+            className="object-cover"
           />
-          </Link>
-      </div>
+        </div>
+      </Link>
+      <h1 className="text-white text-md">{work.title}</h1>
+      <p className="text-white/50 text-xs">{work.description}</p>
+    </div>
   )
 }
 
