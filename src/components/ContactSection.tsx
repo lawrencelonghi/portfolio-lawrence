@@ -19,27 +19,26 @@ const ContactSection = () => {
 
   //animacao da linha hr
 useGSAP(() => {
-  if (!lineRef.current) return;
-
   gsap.fromTo(
     lineRef.current,
     {
       scaleX: 0,
-      transformOrigin: "right center"
+      transformOrigin: "right center",
     },
     {
+      duration: 5,
       scaleX: 1,
-      transformOrigin: "right center",
       ease: "none",
       scrollTrigger: {
         trigger: lineRef.current,
-        start: "top 90%",
-        end: "bottom 90%",
         scrub: 1,
+        start: "top bottom",
+        end: "top 80%"
       }
     }
   );
 }, []);
+
 
   return (
     <section id="contact" className="ml-5 mr-5 md:ml-26 md:mr-26  pb-36">

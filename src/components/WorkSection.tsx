@@ -33,7 +33,7 @@ const WorkSection = () => {
               title={work.title}
               description={work.description}
               image={work.image}
-              href={work.hrefIn}
+              href={work.hrefEx}
             />
           </div>
         ))}

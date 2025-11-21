@@ -52,20 +52,17 @@ const AboutSection = () => {
       gsap.fromTo(
       lineRef.current,
       {
-        width: "0px",
+        width: 0,
       },
       {
+        duration: 5,
         width: "100%",
-        stagger: {
-          each: 0.02,
-          from: "start"
-        },
         ease: "none",
         scrollTrigger: {
-          trigger: lineRef.current,
-          start: "top 100%",
-          end: "bottom 90%",
+          trigger: lineRef.current ,
           scrub: 1,
+          start: "top bottom",
+          end: "top center"
         }
       }
     );
@@ -107,17 +104,6 @@ const AboutSection = () => {
           ))}
           </div>
 
-          <Image 
-            src='/gradient-sample.png'
-            alt=""
-            width={500}
-            height={500}
-            className="opacity-50"
-            style={{
-              maskImage: 'radial-gradient(circle, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 50%)',
-              WebkitMaskImage: 'radial-gradient(circle, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 100%)'
-            }}
-          />
           
         </div>
       </div>
