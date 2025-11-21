@@ -13,7 +13,7 @@ const WorkSection = () => {
   const { t } = useLanguage()
 
   return (
-    <section className="flex flex-col gap-36 ml-5 mr-5 md:ml-26 md:mr-24 pb-20">
+    <section id="work" className="flex flex-col gap-36 ml-5 mr-5 md:ml-26 md:mr-24 pb-20">
       <div>
         <h1 className="text-white text-sm flex items-center gap-3">
           <MoveRight size={12}/>

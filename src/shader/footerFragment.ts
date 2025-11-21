@@ -56,9 +56,9 @@ mat2 rotate2D(float angle){
 
 void main() {
     // CORES DIFERENTES PARA O FOOTER
-    vec3 baseFirst =  vec3(10./255., 30./255., 30./255.);  // Laranja avermelhado intenso
-    vec3 accent =  vec3(55./255., 55./255., 15./255.);  // Quase branco (bege claro)
-    vec3 baseSecond =  vec3(10./255., 50./255., 0./255.);  // Vermelho escuro
+    vec3 baseFirst =  vec3(45./255., 85./255., 60./255.);  // Verde esmeralda escuro
+    vec3 accent =  vec3(0., 0., 0.);
+    vec3 baseSecond =  vec3(25./255., 30./255., 60./255.);
 
 
     float n = noise(vPosition + time);

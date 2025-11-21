@@ -41,7 +41,7 @@ useGSAP(() => {
 
 
   return (
-    <section id="contact" className="ml-5 mr-5 md:ml-26 md:mr-26  pb-36">
+    <section id="contact" className="ml-5 mr-5 md:ml-26 md:mr-26  pb-12">
       <div>
         <hr ref={lineRef} className="text-white/20 h-[0.2px] " />
       </div>
@@ -54,9 +54,21 @@ useGSAP(() => {
         </h1>
       </div>
 
-        <div className=" flex gap-8 md:mr-50 mb-5 justify-center text-center">
-          <a className="text-sm text-center cursor-pointer hover:text-white hover:scale-105 ease-in-out duration-200  justify-baseline font-light text-white/50">
+        <div className=" flex flex-col gap-8 md:mr-50 mb-5 text-left">
+          <a className="text-sm  cursor-pointer hover:text-white hover:scale-105 ease-in-out duration-200 font-light text-white/50">
             lawrencelonghi@proton.me
+          </a>
+          <a className="text-sm  cursor-pointer hover:text-white hover:scale-105 ease-in-out duration-200 font-light text-white/50"
+             href='https://www.linkedin.com/in/lawrencelonghi'
+             target="_blank"
+             rel="noopener noreferrer">
+            linkedin.com/in/lawrencelonghi       
+          </a>
+          <a className="text-sm  cursor-pointer hover:text-white hover:scale-105 ease-in-out duration-200 font-light text-white/50"
+             href='https://github.com/lawrencelonghi'
+             target="_blank"
+             rel="noopener noreferrer">
+          github.com/lawrencelonghi
           </a>
         </div>
       </div>

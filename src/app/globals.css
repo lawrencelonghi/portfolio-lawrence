@@ -73,14 +73,6 @@ body {
 }
 
 
-.nav-link {
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: white;
-  transform: scale(1.05);
-}
 
 .container {
 margin-left: 50px;
