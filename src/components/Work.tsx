@@ -1,10 +1,16 @@
 import Image from "next/image"
 import Link from "next/link"
 
-const Work = (work: {id: number, title: string, description: string, image: string, href: string}) => {
+const Work = (work: {
+  id: number, 
+  title: string, 
+  description: string, 
+  image: string, 
+  slug: string
+}) => {
   return (
     <div className="flex flex-col opacity-50 hover:opacity-100 duration-300 gap-3">
-      <Link href={work.href} className="block w-full">
+      <Link href={`/projects/${work.slug}`} className="block w-full">
         <div className="relative w-full aspect-square overflow-hidden rounded-xs">
           <Image
             src={work.image}

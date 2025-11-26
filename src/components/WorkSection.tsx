@@ -1,8 +1,7 @@
 'use client'
 import Work from "./Work"
-import { worksData } from "../../worksData"
-import Image from "next/image"
-import { useState, useEffect, useRef } from "react"
+import { worksData } from "../app/data/worksData"
+import { useRef } from "react"
 import { useLanguage } from "@/contexts/LanguageContext"
 import { MoveRight } from 'lucide-react';
 
@@ -11,6 +10,7 @@ const WorkSection = () => {
   const lineRef = useRef<HTMLHRElement>(null);
   const worksContainerRef = useRef<HTMLDivElement>(null)
   const { t } = useLanguage()
+   console.log('🔍 DEBUG WorkSection - worksData:', worksData);
 
   return (
     <section id="work" className="flex flex-col gap-36 ml-5 mr-5 md:ml-26 md:mr-24 pb-20">
@@ -33,7 +33,7 @@ const WorkSection = () => {
               title={work.title}
               description={work.description}
               image={work.image}
-              href={work.hrefEx}
+              slug={work.slug}
             />
           </div>
         ))}
