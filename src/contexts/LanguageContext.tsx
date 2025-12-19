@@ -89,7 +89,7 @@ const translations: Translations = {
     // Samambaia
     samambaiaFullDescription: 'Cardápio digital mobile interativo para o Samambaia Bar e Lanches, oferecendo uma experiência moderna e intuitiva para visualização de drinks e pratos. Desenvolvido com tecnologias web fundamentais.',
     samambaiaChallenges: 'Desenvolver um cardápio digital que fosse fácil de atualizar pelo cliente e que funcionasse perfeitamente em dispositivos móveis, considerando que a maioria dos acessos seria de smartphones.',
-    samambaiaSolution: 'Criei um painel administrativo simples em Django para gerenciamento do cardápio e implementei um design mobile-first com animações suaves em JavaScript vanilla.',
+    samambaiaSolution: 'Criei um painel administrativo simples em Django para gerenciamento do cardápio e implementei um design mobile-first com HTML, CSS e JavaScript.',
     
     // Labels
     viewProject: 'Ver projeto',

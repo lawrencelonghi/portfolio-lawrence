@@ -58,7 +58,13 @@ export default function Home() {
     <>
       {/* Seção do topo com gradiente animado */}
       <div className="relative h-screen w-screen">
-        <Canvas camera={topCamera} dpr={dpr}>
+        <Canvas 
+          camera={topCamera} 
+          dpr={dpr}
+          style={{ pointerEvents: 'none' }}
+          eventSource={typeof window !== 'undefined' ? document.documentElement : undefined}
+          eventPrefix="client"
+        >
           <Suspense fallback={null}>
             <Background/>
           </Suspense>
@@ -77,7 +83,7 @@ export default function Home() {
     
         <div id="hero" className="absolute inset-0 flex flex-col items-center justify-center">
           <div className="text-center items-center justify-center flex mt-5 flex-col gap-5">
-            <h1 className="text-3xl md:text-5xl text-white/80 font-light text-drop-shadow-2xl">
+            <h1 className="text-3xl md:text-5xl text-white/80  text-drop-shadow-2xl">
               LAWRENCE LONGHI
             </h1>
             <p className="text-xl md:text-2xl text-white/50 font-light drop-shadow-lg">
@@ -110,7 +116,10 @@ export default function Home() {
           }}
         />
 
-        <Canvas camera={footerCamera} dpr={dpr}>
+        <Canvas 
+          camera={footerCamera} 
+          dpr={dpr}
+        >
           <Suspense fallback={null}>
             <BackgroundFooter/>
           </Suspense>
