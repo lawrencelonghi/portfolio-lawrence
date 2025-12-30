@@ -66,9 +66,9 @@ export const Navbar = () => {
         </div>  
 
         <div className="flex tracking-wide text-white/50 gap-8 max-lg:hidden">
-          <Link href='#work' className="nav-link">{t.projects}.</Link>
-          <Link href='#about' className="nav-link">{t.about}.</Link>
-          <Link href='#contact' className="nav-link">{t.contact}.</Link>
+          <Link href='/#work' className="nav-link">{t.projects}.</Link>
+          <Link href='/#about' className="nav-link">{t.about}.</Link>
+          <Link href='/#contact' className="nav-link">{t.contact}.</Link>
         </div>
 
         <button 
