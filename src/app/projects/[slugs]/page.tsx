@@ -68,7 +68,7 @@ const ProjectPage = () => {
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white">
       {/* Header */}
-      <div ref={headerRef} className="container mx-auto px-5 md:px-26 pt-32 pb-16">
+      <div ref={headerRef} className="container-inline px-5 md:px-26 pt-32 pb-16">
         <Link 
           href="/#work" 
           className="inline-flex items-center gap-2 text-xs text-white/50 hover:text-white transition-colors mb-12 justify-center md:justify-start"
@@ -188,7 +188,7 @@ const ProjectPage = () => {
       </div>
 
       {/* Content */}
-      <div ref={contentRef} className="container mx-auto px-5 md:px-26 pb-32 space-y-24">
+      <div ref={contentRef} className="container-inline px-5 md:px-26 pb-32 space-y-24">
         {/* Desafios */}
         {project.challengesKey && (
           <section className="flex flex-col items-center md:items-start text-center md:text-left">

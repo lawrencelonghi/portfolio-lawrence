@@ -41,7 +41,7 @@ float random(vec2 st) {
 
 float lines(vec2 uv, float offset){
     return smoothstep(
-        0., 0.5 + offset*0.5,
+        0., 0.5 + offset*0.6,
         0.5*abs((sin(uv.x*30.) + offset*2.))
     );
 }
@@ -55,9 +55,9 @@ mat2 rotate2D(float angle){
 
 void main() {
 
-    vec3 baseFirst = vec3(30./255., 180./255., 120./255.);   // Verde-ciano tech
+    vec3 baseFirst = vec3(18./255., 110./255., 110./255.);   // Verde-ciano tech
     vec3 accent = vec3(0., 0., 0.);                          // Preto
-    vec3 baseSecond = vec3(10./255., 60./255., 50./255.);    // Verde escuro
+    vec3 baseSecond = vec3(30./255., 170./255., 110./255.);    // Verde escuro
 
     float n = noise(vPosition + time);
     
