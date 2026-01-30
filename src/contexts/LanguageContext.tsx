@@ -18,6 +18,11 @@ type Translations = {
     aboutText1: string
     aboutText2: string
     aboutText3: string
+
+    // Short project descriptions
+    rickShortDescription: string
+    bookdShortDescription: string
+    samambaiaShortDescription: string
     
     // Roles
     fullStackDeveloper: string
@@ -68,14 +73,19 @@ const translations: Translations = {
     
     // Sobre
     aboutText1: 'Sou músico, pianista e professor de piano, atualmente em transição de carreira para a área de desenvolvimento de software.',
-    aboutText2: 'No último ano, além da dedicação ao ensino e à música, tenho estudado programação e já realizei dois projetos como freelancer, o que me proporcionou a oportunidade de pôr em prática meus conhecimentos como desenvolvedor.',
-    aboutText3: 'Minha trajetória na música me trouxe disciplina, foco e criatividade - qualidades que agora aplico no desenvolvimento.',
+    aboutText2: 'No último ano, além da dedicação ao ensino e à música, tenho estudado programação e já realizei dois projetos como freelancer, o que me proporcionou a oportunidade de colocar em prática meus conhecimentos como desenvolvedor.',
+    aboutText3: 'Minha trajetória na música me trouxe disciplina, foco e criatividade - qualidades que agora aplico no desenvolvimento de software.',
     
     // Roles
     fullStackDeveloper: 'Desenvolvedor Full Stack',
     frontendDeveloper: 'Desenvolvedor Frontend',
     backendDeveloper: 'Desenvolvedor Backend',
-    
+
+    // Short project descriptions
+    rickShortDescription: "Portfolio para um maquiador desenvolvido com React, TypeScript, Node.js e Express.",
+    bookdShortDescription: "Um projeto de avaliação de livros desenvolvido com Next.js, Tailwind CSS e TypeScript.",
+    samambaiaShortDescription:  "Um cardápio digital mobile desenvolvido com JavaScript, TypeScript e Express",    
+
     // Rick
     rickFullDescription: 'Portfolio profissional desenvolvido para o maquiador Rick Tadeu, apresentando seu trabalho de forma elegante, minimalista e funcional, como solicitado pelo cliente. O projeto combina uma interface moderna em React com um backend robusto em Django onde o cliente pode adicionar, remover e editar fotos.',
     rickChallenges: 'O principal desafio foi criar uma galeria de fotos que destacasse o trabalho do maquiador de forma profissional, refletindo seu estilo e personalidade.',
@@ -115,14 +125,20 @@ const translations: Translations = {
     contact: 'contact',
     
     // Sobre
-    aboutText1: 'I am a musician, pianist and piano teacher, currently transitioning my career to software development.',
-    aboutText2: 'In the past year, in addition to dedication to teaching and music, I have been studying programming and have already completed two freelance projects, which gave me the opportunity to put my developer skills into practice.',
-    aboutText3: 'My journey in music has brought me discipline, focus and creativity - qualities that I now apply to development.',
+    aboutText1: 'I am a musician, pianist and piano teacher, currently transitioning my career into software development.',
+    aboutText2: 'Over the past year, in addition to dedication to teaching and music, I have been studying programming and have already completed two freelance projects, which gave me the opportunity to put my developer skills into practice.',
+    aboutText3: 'My journey in music has brought me discipline, focus and creativity - qualities that I now apply to software development.',
     
     // Roles
     fullStackDeveloper: 'Full Stack Developer',
     frontendDeveloper: 'Frontend Developer',
     backendDeveloper: 'Backend Developer',
+
+    // Short project descriptions
+    rickShortDescription: "A professional portfolio for a makeup artist developed with React, TypeScript, Node.js and Express.",
+    bookdShortDescription: "A book review project developed with Next.js, Tailwind CSS, and TypeScript.",
+    samambaiaShortDescription: "A mobile digital menu developed with JavaScript, TypeScript, and Express.",
+
     
     // Rick
     rickFullDescription: 'Professional portfolio developed for makeup artist Rick Tadeu, showcasing his work in an elegant and functional way. The project combines a modern React interface with a robust Django backend.',
@@ -158,19 +174,25 @@ const translations: Translations = {
     developer: 'Développeur Full Stack',
     projects: 'projets',
     selectedProjects: 'projets sélectionnées',
-    about: 'à props',
+    about: 'à propos',
     aboutMe: 'à propos de moi',
     contact: 'contact',
     
     // Sobre
     aboutText1: 'Je suis musicien, pianiste et professeur de piano, actuellement en reconversion professionnelle vers le développement logiciel.',
-    aboutText2: "Au cours de l'année dernière, en plus de mon dévouement à l'enseignement et à la musique, j'ai étudié la programmation et j'ai déjà réalisé deux projets en freelance, ce qui m'a donné l'occasion de mettre en pratique mes compétences de développeur.",
+    aboutText2: "Au cours de l'année dernière, en plus de mon dévouement à l'enseignement et à la musique, j'ai étudié la programmation et j'ai déjà réalisé deux projets en tant que freelance, ce qui m'a donné l'occasion de mettre en pratique mes compétences de développeur.",
     aboutText3: 'Mon parcours dans la musique m\'a apporté discipline, concentration et créativité - des qualités que j\'applique maintenant au développement.',
     
     // Roles
     fullStackDeveloper: 'Développeur Full Stack',
     frontendDeveloper: 'Développeur Frontend',
     backendDeveloper: 'Développeur Backend',
+
+    // Short project descriptions
+    rickShortDescription: "Portfolio pour un maquilleur développé avec React, TypeScript, Node.js et Express.",
+    bookdShortDescription: "Un projet d’évaluation de livres développé avec Next.js, Tailwind CSS et TypeScript.",
+    samambaiaShortDescription: "Un menu mobile développé avec JavaScript, TypeScript et Express.",
+
     
     // Rick
     rickFullDescription: 'Portfolio professionnel développé pour le maquilleur Rick Tadeu, présentant son travail de manière élégante et fonctionnelle. Le projet combine une interface React moderne avec un backend Django robuste.',

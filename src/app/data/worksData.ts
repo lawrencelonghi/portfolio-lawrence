@@ -1,34 +1,4 @@
-// export const worksData = [
-//   {
-//     "id": 1,
-//     "title": "ricktadeu.com.br",
-//     "hrefEx": "https://ricktadeu.com.br",
-//     "hrefIn": "/rick",
-//     "description": "Portfolio para um maquiador desenvolvido com React e Django",
-//     "image": "/imgs/rick1.jpeg",
-//     "hoverImage": "/imgs/rick-img.png"
-//   },
-//   {
-//     "id": 2,
-//     "hrefEx": "https://projectbookd.vercel.app",
-//     "hrefIn": "/bookd",
-//     "title": "projectbookd.vercel.app",
-//     "description": "Um projeto de avaliação de livros desenvolvido com Next.js",
-//     "image": "/imgs/kubrikCover.jpg",
-//     "hoverImage": "/imgs/bookd-img.png"
-//   },
-//   {
-//     "id": 3,
-//     "hrefEx": "https://samambaiabar.com.br",
-//     "hrefIn": "/samambaia",
-//     "title": "samambaiabar.com.br",
-//     "description": "Um cardápio online desenvolvido apenas com HTML, CSS, JavaScript e Django",
-//     "image": "/imgs/drink-sour.jpg",
-//     "hoverImage": "/imgs/samambaia-nv.png"
-//   },
-// ]
-
-// worksData.ts
+import { useLanguage } from "@/contexts/LanguageContext"
 export interface WorkData {
   id: number;
   title: string;
@@ -53,18 +23,20 @@ export interface WorkData {
   resultsKey?: string;
 }
 
-export const worksData: WorkData[] = [
+export const worksData: WorkData[] = 
+
+[
   {
     id: 1,
     title: "ricktadeu.com.br",
     hrefEx: "https://ricktadeu.com.br",
     hrefIn: "/rick",
     slug: "rick",
-    description: "Portfolio para um maquiador desenvolvido com React e Django",
+    description: "rickShortDescription",
     image: "/imgs/rick1.jpeg",
     hoverImage: "/imgs/rick-img.png",
     descriptionKey: "rickFullDescription",
-    technologies: ["React", "Django", "Tailwind CSS","sqlite3"],
+    technologies: ["React", "TypeScript", "Node.js", "Express", "Tailwind CSS","Sqlite3", "prisma"],
     year: "2025",
     client: "Rick Tadeu",
     roleKey: "fullStackDeveloper",
@@ -80,7 +52,7 @@ export const worksData: WorkData[] = [
     hrefIn: "/bookd",
     slug: "bookd",
     title: "projectbookd.vercel.app",
-    description: "Um projeto de avaliação de livros desenvolvido com Next.js",
+    description: "bookdShortDescription",
     image: "/imgs/kubrikCover.jpg",
     hoverImage: "/imgs/bookd-img.png",
     descriptionKey: "bookdFullDescription",
@@ -101,7 +73,7 @@ export const worksData: WorkData[] = [
     hrefIn: "/samambaia",
     slug: "samambaia",
     title: "samambaiabar.com.br",
-    description: "Um cardápio online mobile desenvolvido apenas com HTML, CSS, JavaScript e Django",
+    description: "samambaiaShortDescription",
     image: "/imgs/drink-sour.jpg",
     hoverImage: "/imgs/samambaia-nv.png",
     descriptionKey: "samambaiaFullDescription",

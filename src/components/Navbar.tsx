@@ -47,19 +47,19 @@ export const Navbar = () => {
           <span className="text-white font-extrabold">I</span>
           <button 
             onClick={() => handleLanguageChange('pt')} 
-            className={`nav-link ${language === 'pt' ? 'text-white' : ''}`}
+            className={`cursor-pointer nav-link ${language === 'pt' ? 'text-white' : ''}`}
           >
             PT
           </button>
           <button 
             onClick={() => handleLanguageChange('en')} 
-            className={`nav-link ${language === 'en' ? 'text-white' : ''}`}
+            className={`cursor-pointer nav-link ${language === 'en' ? 'text-white' : ''}`}
           >
             EN
           </button>
           <button 
             onClick={() => handleLanguageChange('fr')} 
-            className={`nav-link ${language === 'fr' ? 'text-white' : ''}`}
+            className={`cursor-pointer nav-link ${language === 'fr' ? 'text-white' : ''}`}
           >
             FR
           </button>

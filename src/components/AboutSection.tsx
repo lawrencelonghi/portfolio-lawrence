@@ -4,7 +4,6 @@ import { MoveRight } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRef } from "react";
-import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 

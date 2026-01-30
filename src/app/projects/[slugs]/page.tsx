@@ -84,30 +84,26 @@ const ProjectPage = () => {
             </h1>
           </div>
 
-          {/* Galeria de imagens */}
 {/* Galeria de imagens */}
-<section className='w-full flex flex-col gap-3 mb-10'>
+{/* Galeria de imagens */}
+<section className='w-full flex flex-col gap-8 mb-10'>
   {/* Container principal - imagem e descrição lado a lado */}
-  <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 w-full">
+  <div className="flex flex-col gap-8 lg:gap-8 w-full">
     {/* Imagem */}
-    <div className="w-full lg:flex-1 ">
-      <div className="flex justify-center w-full">
-        {project.images.slice(0, 1).map((image, index) => (
-          <div
-            key={index}
-            className="w-full h-[250px]  relative overflow-hidden"
-          >
-            <Image
-              src={image}
-              alt={`${project.title} - imagem ${index + 1}`}
-              fill
-              className="object-contain"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-          </div>
-        ))}
+    {project.images.slice(0, 1).map((image, index) => (
+      <div
+        key={index}
+        className="w-full h-[250px] relative overflow-hidden" // Removido espaços extras
+      >
+        <Image
+          src={image}
+          alt={`${project.title} - imagem ${index + 1}`}
+          fill
+          className="object-contain object-left" // Adicionado object-left
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 33vw"
+        />
       </div>
-    </div>
+    ))}
     
     {/* Descrição */}
     <div className="w-full lg:flex-1 max-w-2xl">
@@ -144,7 +140,7 @@ const ProjectPage = () => {
 
 
           {/* tecnologias */}
-          <div className="flex flex-col gap-8 w-full max-w-2xl items-center md:items-start text-center md:text-left"> {/* Reduzido para max-w-2xl */}
+          <div className="flex flex-col gap-8 w-full max-w-2xl items-center md:items-start text-center md:text-left"> 
             <div className='flex flex-col gap-2 w-full'>
               <h3 className="text-sm text-white/50 uppercase font-extralight tracking-wider mb-2">
                 {t.technologies}
@@ -188,7 +184,7 @@ const ProjectPage = () => {
       </div>
 
       {/* Content */}
-      <div ref={contentRef} className="ml-5 mr-5 md:ml-26 md:mr-24 px-5 md:px-26 pb-32 space-y-24">
+      <div ref={contentRef} className="ml-5 mr-5 md:ml-26 md:mr-24 px-5 md:px-26 pb-32 space-y-10">
         {/* Desafios */}
         {project.challengesKey && (
           <section className="flex flex-col items-center md:items-start text-center md:text-left">

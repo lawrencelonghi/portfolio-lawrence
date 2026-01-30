@@ -1,6 +1,5 @@
 'use client'
 import { Github, Linkedin } from 'lucide-react';
-import Link from "next/link";
 
 export const SocialLinks = () => {
   return (
@@ -9,16 +8,26 @@ export const SocialLinks = () => {
         href="https://github.com/lawrencelonghi" 
         target="_blank"
         rel="noopener noreferrer"
+        className='group p-5 -m-5'
       >
-        <Github size={'20px'} className="text-white/70 hover:text-white hover:fill-white transition-colors duration-300 " />
+        <Github 
+          size={'20px'} 
+          className="text-white/70 group-hover:text-white group-hover:fill-white transition-colors duration-300"
+        />
       </a>
+      
       <span className='text-3xl font-thin text-white/30'>|</span>
+      
       <a 
         href='https://www.linkedin.com/in/lawrencelonghi'
         target="_blank"
         rel="noopener noreferrer"
+        className='group p-5 -m-5'
       >
-        <Linkedin size={'20px'} className="text-white/70 hover:text-white hover:fill-white transition-colors duration-300" />
+        <Linkedin 
+          size={'20px'} 
+          className="text-white/70 group-hover:text-white group-hover:fill-white transition-colors duration-300"
+        />
       </a>
     </div>
   )
