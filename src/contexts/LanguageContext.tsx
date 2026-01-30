@@ -87,9 +87,9 @@ const translations: Translations = {
     samambaiaShortDescription:  "Um cardápio digital mobile desenvolvido com JavaScript, TypeScript e Express",    
 
     // Rick
-    rickFullDescription: 'Portfolio profissional desenvolvido para o maquiador Rick Tadeu, apresentando seu trabalho de forma elegante, minimalista e funcional, como solicitado pelo cliente. O projeto combina uma interface moderna em React com um backend robusto em Django onde o cliente pode adicionar, remover e editar fotos.',
-    rickChallenges: 'O principal desafio foi criar uma galeria de fotos que destacasse o trabalho do maquiador de forma profissional, refletindo seu estilo e personalidade.',
-    rickSolution: 'O frontend com React e tailwindCSS cria efeitos e transições delicadas. o bento grid, pedido pelo cliente, foi construido com poucas linhas de CSS, gerando grande economia de recursos. Com Django Admin o cliente pode gerenciar as imagens e vídeos com facilidade.',
+    rickFullDescription: 'Portfolio profissional desenvolvido para o maquiador Rick Tadeu, apresentando seu trabalho de forma elegante, minimalista e funcional, como solicitado pelo cliente. O projeto combina uma interface moderna em React com um backend robusto em Node.js e Express, com uma página admin onde o cliente pode adicionar, remover e editar fotos e vídeos.',
+    rickChallenges: 'O principal desafio foi integrar a home page, a página admin com o backend e o banco de dados. Precisaria criar uma galeria de fotos e vídeos que destacasse o trabalho do maquiador de forma profissional, refletindo seu estilo e personalidade e um admin que fosse intuitivo e fácil de utilizar.',
+    rickSolution: 'O frontend com React e tailwindCSS cria efeitos e transições sutis. O layout bento grid, pedido pelo cliente, foi construido com poucas linhas de CSS, gerando grande economia de recursos. Com o backend em Node.js e Express, consegui criar um backend robusto e personalizado para o projeto',
     
     // Bookd
     bookdFullDescription: 'Plataforma social para avaliação e descoberta de livros, permitindo que usuários organizem seu processo de leitura e encontrem novos livros.',
