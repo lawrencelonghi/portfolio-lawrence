@@ -19,7 +19,7 @@ export const SocialLinks = () => {
       <span className='text-3xl font-thin text-white/30'>|</span>
       
       <a 
-        href='https://www.linkedin.com/in/lawrencelonghi'
+        href='https://www.linkedin.com/in/lawrence-longhi'
         target="_blank"
         rel="noopener noreferrer"
         className='group p-5 -m-5'
