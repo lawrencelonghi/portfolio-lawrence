@@ -16,7 +16,7 @@ const WorkSection = () => {
       <div>
         <h1 className="text-white text-sm flex items-center gap-3">
           <MoveRight size={12}/>
-          projects
+          {t.projects}
         </h1>
       </div>
       
