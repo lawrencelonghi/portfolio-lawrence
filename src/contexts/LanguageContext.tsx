@@ -87,19 +87,19 @@ const translations: Translations = {
     samambaiaShortDescription:  "Um cardápio digital mobile desenvolvido com JavaScript, TypeScript e Express",    
 
     // Rick
-    rickFullDescription: 'Portfolio profissional desenvolvido para o maquiador Rick Tadeu, apresentando seu trabalho de forma elegante, minimalista e funcional, como solicitado pelo cliente. O projeto combina uma interface moderna em React com um backend robusto em Node.js e Express, com uma página admin onde o cliente pode adicionar, remover e editar fotos e vídeos.',
-    rickChallenges: 'O principal desafio foi integrar a home page, a página admin com o backend e o banco de dados. Precisaria criar uma galeria de fotos e vídeos que destacasse o trabalho do maquiador de forma profissional, refletindo seu estilo e personalidade e um admin que fosse intuitivo e fácil de utilizar.',
-    rickSolution: 'O frontend com React e tailwindCSS cria efeitos e transições sutis. O layout bento grid, pedido pelo cliente, foi construido com poucas linhas de CSS, gerando grande economia de recursos. Com o backend em Node.js e Express, consegui criar um backend robusto e personalizado para o projeto',
+    rickFullDescription: 'Portfolio profissional desenvolvido para o maquiador Rick Tadeu, apresentando seu trabalho de forma elegante, minimalista e funcional, como solicitado pelo cliente. O projeto combina uma interface moderna em React com um backend robusto em Node.js e Express. O cliente tem acesso a uma  página admin onde o cliente pode adicionar, remover e editar fotos e vídeos.',
+    rickChallenges: 'O principal desafio foi integrar a home page, a página admin com o backend e o banco de dados. Seria preciso criar uma galeria de fotos e vídeos que destacasse o trabalho do maquiador de forma profissional, refletindo seu estilo e personalidade e um admin que fosse intuitivo e fácil de utilizar.',
+    rickSolution: 'O frontend com React e tailwindCSS garante boa performance e usabilidade tanto para os usuários quanto para meu cliente. O layout bento grid, pedido pelo cliente, foi construido com poucas linhas de CSS, gerando grande economia de recursos. Usando Node.js e Express, consegui criar um backend robusto e personalizado para o projeto',
     
     // Bookd
-    bookdFullDescription: 'Plataforma social para avaliação e descoberta de livros, permitindo que usuários organizem seu processo de leitura e encontrem novos livros.',
-    bookdChallenges: 'Neste projeto de estudos criei um sistema de login para usuários onde cada usuário pode salvar os livros que está lendo, os que quer ler e os que já leu. O principal desafio foi lidar com as rotas e as conexões com banco de dados.',
-    bookdSolution: 'Consegui desenvolver a aplicação inteira em NextJs, que era meu objeto de estudo no momento. O banco de dados utilizado foi PostgreSQL. Escolhi usar este banco de dados pois nos projetos anteriores eu tinha trabalhado com SQLite e decidi me desafiar e usar um banco de dados mais robusto.',
+    bookdFullDescription: 'Plataforma, ainda em desenvolvimento, para avaliação e descoberta de livros, permitindo que usuários organizem seu processo de leitura e encontrem novos livros.',
+    bookdChallenges: 'Neste projeto de estudos criei um sistema de login para usuários, onde cada usuário pode salvar os livros que está lendo, os que quer ler e os que já leu. O principal desafio foi lidar com as rotas e as conexões com banco de dados. Ainda pretendo transformar este projeto em uma plataforma social, onde usuários possam seguir uns aos outros e compartilhar suas opiniões sobre livros.',
+    bookdSolution: 'Desenvolvi a aplicação inteira em NextJs, que era meu objeto de estudo no momento. O banco de dados utilizado foi PostgreSQL. Escolhi usar este banco de dados pois em outros projetos eu havia trabalhado apenas com SQLite e decidi me desafiar e usar um banco de dados mais robusto.',
     
     // Samambaia
     samambaiaFullDescription: 'Cardápio digital mobile interativo para o Samambaia Bar e Lanches, oferecendo uma experiência moderna e intuitiva para visualização de drinks e pratos. Desenvolvido com tecnologias web fundamentais.',
-    samambaiaChallenges: 'Desenvolver um cardápio digital que fosse fácil de atualizar pelo cliente e que funcionasse perfeitamente em dispositivos móveis, considerando que a maioria dos acessos seria de smartphones.',
-    samambaiaSolution: 'Criei um painel administrativo simples em Django para gerenciamento do cardápio e implementei um design mobile-first com HTML, CSS e JavaScript.',
+    samambaiaChallenges: 'Desenvolver um cardápio digital que fosse fácil de atualizar pelo cliente e que funcionasse perfeitamente em dispositivos móveis, considerando que a maioria dos acessos seria de smartphones. Eu precisaria criar um painel admin amigável para o cliente gerenciar os itens do cardápio.',
+    samambaiaSolution: 'Criei um painel administrativo minimalista para gerenciamento do cardápio e implementei um design mobile-first com HTML, CSS e JavaScript. O backend em Node.js e Express gerencia o armazenamento e a atualização dos itens do cardápio.',
     
     // Labels
     viewProject: 'Ver projeto',
@@ -138,22 +138,21 @@ const translations: Translations = {
     rickShortDescription: "A professional portfolio for a makeup artist developed with React, TypeScript, Node.js and Express.",
     bookdShortDescription: "A book review project developed with Next.js, Tailwind CSS, and TypeScript.",
     samambaiaShortDescription: "A mobile digital menu developed with JavaScript, TypeScript, and Express.",
-
-    
+  
     // Rick
-    rickFullDescription: 'Professional portfolio developed for makeup artist Rick Tadeu, showcasing his work in an elegant and functional way. The project combines a modern React interface with a robust Django backend.',
-    rickChallenges: 'The main challenge was creating a photo gallery that showcased the makeup artist\'s work professionally, with fast loading and smooth transitions between images.',
-    rickSolution: 'I implemented an optimized gallery system with lazy loading, image compression and intelligent caching. The Django backend manages image upload and processing.',
+    rickFullDescription: 'Professional portfolio developed for makeup artist Rick Tadeu, showcasing his work in an elegant, minimalist and functional way, as required by the client. The project combines a modern React interface with a robust Node.js and Express backend.',
+    rickChallenges: 'The main challenge was to integrate the home page, the admin page with the backend and the database. It would be necessary to create a photo and video gallery that highlighted the makeup artist\'s work in a professional way, reflecting his style and personality, and also an admin page that was intuitive and easy to use.',
+    rickSolution: 'The frontend with React and TailwindCSS ensures good performance and usability for both users and my client. The bento grid layout, requested by the client, was built with few lines of CSS, providing great resource savings. Using Node.js and Express, I was able to create a robust and customized backend for the project.',
     
     // Bookd
-    bookdFullDescription: 'Social platform for book review and discovery, allowing users to share their opinions and find new readings based on their preferences.',
-    bookdChallenges: 'Create an efficient recommendation system that considered user reviews and reading preferences, maintaining performance even with large data volumes.',
-    bookdSolution: 'I developed a recommendation algorithm based on review similarity and implemented strategic caching to optimize database queries.',
-    
+    bookdFullDescription: 'Bookd is a platform, still under development, for book review and discovery, allowing users to organize their reading processes and making easier to find new books to read.',
+    bookdChallenges: 'In this personal project I built a login system for users, where each user can store the books that are being read, the ones they want to read, and those already readed. The main challenge was to handle the routes and the database connections. I still intend to transform this project into a social platform, where users can follow each other and share their opinions about books.',
+    bookdSolution: 'I develped the application using Next.js fullstack, as I was studing Next at the time. The database used was PostgreSQL. I chose to use this database because in other projects I had worked only with SQLite and I decided to challenge myself and use a more robust database.',
+
     // Samambaia
-    samambaiaFullDescription: 'Interactive digital mobile menu for Samambaia Bar e Lanches, offering a modern and intuitive experience for viewing drinks and dishes. Developed with fundamental web technologies.',
-    samambaiaChallenges: 'Develop a digital menu that was easy for the client to update and worked perfectly on mobile devices, considering that most accesses would be from smartphones.',
-    samambaiaSolution: 'I created a simple Django admin panel for menu management and implemented a mobile-first design with smooth animations in vanilla JavaScript.',
+    samambaiaFullDescription: 'Interactive digital mobile menu for Samambaia Bar e Lanches, offering a modern and intuitive experience for the restaurant clients. Developed with fundamental web technologies.',
+    samambaiaChallenges: 'Develop a digital menu that was easy for the client to update and worked perfectly on mobile devices, considering that most accesses would be from smartphones. I needed to create an user-friendly admin panel for the client to manage the menu items.',
+    samambaiaSolution: 'I created a minimalist admin panel for menu management and implemented a mobile-first design with smooth animations in vanilla JavaScript. The Node.js and Express backend manages the storage and updating of menu items.',
     
     // Labels
     viewProject: 'View project',
@@ -194,20 +193,21 @@ const translations: Translations = {
     samambaiaShortDescription: "Un menu mobile développé avec JavaScript, TypeScript et Express.",
 
     
-    // Rick
-    rickFullDescription: 'Portfolio professionnel développé pour le maquilleur Rick Tadeu, présentant son travail de manière élégante et fonctionnelle. Le projet combine une interface React moderne avec un backend Django robuste.',
-    rickChallenges: 'Le principal défi était de créer une galerie de photos présentant le travail du maquilleur de manière professionnelle, avec un chargement rapide et des transitions fluides entre les images.',
-    rickSolution: 'J\'ai implémenté un système de galerie optimisé avec chargement différé, compression d\'images et mise en cache intelligente. Le backend Django gère le téléchargement et le traitement des images.',
-    
-    // Bookd
-    bookdFullDescription: 'Plateforme sociale pour l\'évaluation et la découverte de livres, permettant aux utilisateurs de partager leurs opinions et de trouver de nouvelles lectures basées sur leurs préférences.',
-    bookdChallenges: 'Créer un système de recommandation efficace prenant en compte les avis des utilisateurs et leurs préférences de lecture, tout en maintenant les performances même avec de gros volumes de données.',
-    bookdSolution: 'J\'ai développé un algorithme de recommandation basé sur la similarité des avis et mis en œuvre une mise en cache stratégique pour optimiser les requêtes de base de données.',
-    
-    // Samambaia
-    samambaiaFullDescription: 'Menu numérique interactif mobile pour le Samambaia Bar e Lanches, offrant une expérience moderne et intuitive pour visualiser les boissons et les plats. Développé avec des technologies web fondamentales.',
-    samambaiaChallenges: 'Développer un menu numérique facile à mettre à jour par le client et fonctionnant parfaitement sur les appareils mobiles, sachant que la plupart des accès se feraient depuis des smartphones.',
-    samambaiaSolution: 'J\'ai créé un panneau d\'administration Django simple pour la gestion du menu et mis en œuvre un design mobile-first avec des animations fluides en JavaScript vanilla.',
+  // Rick
+rickFullDescription: "Portfolio professionnel développé pour le maquilleur Rick Tadeu, mettant en valeur son travail de manière élégante, minimaliste et fonctionnelle, conformément aux exigences du client. Le projet combine une interface React moderne avec un backend robuste en Node.js et Express.",
+rickChallenges: "Le principal défi a été d’intégrer la page d’accueil, la page d’administration avec le backend et la base de données. Il était nécessaire de créer une galerie de photos et de vidéos mettant en valeur le travail du maquilleur de manière professionnelle, en reflétant son style et sa personnalité, ainsi qu’une page d’administration intuitive et facile à utiliser.",
+rickSolution: "Le frontend en React et TailwindCSS garantit de bonnes performances et une excellente ergonomie pour les utilisateurs comme pour le client. Le layoyt bento grid, demandée par le client, a été réalisée avec peu de lignes de CSS, offrant une économie significative de ressources. En utilisant Node.js et Express, j’ai pu créer un backend robuste et personnalisé pour le projet.",
+
+// Bookd
+bookdFullDescription: "Bookd est une plateforme, encore en cours de développement, dédiée à la critique et à la découverte de livres, permettant aux utilisateurs d’organiser leurs lectures et de faciliter la recherche de nouveaux livres à lire.",
+bookdChallenges: "Dans ce projet personnel, j’ai développé un système de connexion permettant à chaque utilisateur de stocker les livres en cours de lecture, ceux qu’il souhaite lire et ceux déjà lus. Le principal défi a été la gestion des routes et des connexions à la base de données. J’ai également pour objectif de transformer ce projet en une plateforme sociale où les utilisateurs pourront se suivre et partager leurs opinions sur les livres.",
+bookdSolution: "J’ai développé l’application en fullstack avec Next.js, que j’étudiais à ce moment-là. La base de données utilisée était PostgreSQL. J’ai choisi cette base de données car, dans mes projets précédents, je n’avais travaillé qu’avec SQLite et j’ai décidé de me challenger en utilisant une base de données plus robuste.",
+
+// Samambaia
+samambaiaFullDescription: "Menu mobile interactif pour le Samambaia Bar e Lanches, offrant une expérience moderne et intuitive aux clients du restaurant. Développé avec des technologies web fondamentales.",
+samambaiaChallenges: "Développer un menu facile à mettre à jour pour le client et parfaitement fonctionnel sur les appareils mobiles, étant donné que la majorité des accès se ferait via des smartphones. Il a été nécessaire de créer un panneau d’administration convivial pour permettre au client de gérer les éléments du menu.",
+samambaiaSolution: "J’ai créé un panneau d’administration minimaliste pour la gestion du menu et mis en place un design mobile-first avec des animations fluides en JavaScript vanilla. Le backend en Node.js et Express gère le stockage et la mise à jour des éléments du menu.",
+
     
     // Labels
     viewProject: 'Voir le projet',
