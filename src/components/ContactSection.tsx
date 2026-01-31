@@ -46,7 +46,7 @@ useGSAP(() => {
         <hr ref={lineRef} className="text-white/20 h-[0.2px] " />
       </div>
 
-      <div className=" mt-18 md:mt-40 grid text-center md:items-center gap-12 md:flex justify-center md:justify-between">
+      <div className=" mt-18 md:mt-40 grid text-center md:items-center gap-12 md:flex  md:justify-between">
       <div>
         <h1 className="text-white text-sm flex items-center gap-3">
           <MoveRight size={12}/>

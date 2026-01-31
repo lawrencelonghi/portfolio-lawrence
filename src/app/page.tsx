@@ -86,7 +86,7 @@ export default function Home() {
             <h1 className="text-3xl md:text-5xl text-white/80  text-drop-shadow-2xl">
               LAWRENCE LONGHI
             </h1>
-            <p className="text-xl md:text-2xl text-white/50 font-light drop-shadow-lg">
+            <p className="text-xl md:text-2xl text-white font-light drop-shadow-lg">
               {t.developer}
             </p>
             <SocialLinks/>
