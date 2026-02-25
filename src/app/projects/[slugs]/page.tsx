@@ -79,9 +79,11 @@ const ProjectPage = () => {
 
         <div className="flex flex-col  md:gap-0 items-center md:items-start text-center md:text-left">
           <div className="w-full max-w-2xl"> {/* Reduzido de max-w-4xl para max-w-2xl */}
-            <h1 className="text-white text-md md:text-3xl font-extralight mb-6">
-              {project.title}
-            </h1>
+            <Link href={project.projectLink} 
+                  className="block text-white text-md md:text-3xl font-extralight mb-6"
+                  target="_blank" rel="noopener noreferrer">
+              {project.displayedLink}
+            </Link>
           </div>
 
 {/* Galeria de imagens */}

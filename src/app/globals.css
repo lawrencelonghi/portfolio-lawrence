@@ -40,10 +40,6 @@ body {
 
 
 
-.display-cover-img {
-  opacity: 100;
-}
-
 @keyframes reveal-left {
   from {
     clip-path: inset(0 0 0 100%); /* Esconde tudo pela esquerda */

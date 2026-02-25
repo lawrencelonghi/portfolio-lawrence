@@ -12,6 +12,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import ContactSection from "@/components/ContactSection";
 import ScrollUp from "@/components/ScrollUp";
 
+//comentario para commitar direito
+
 export default function Home() {
   const [topCamera, setTopCamera] = useState<THREE.PerspectiveCamera | null>(null);
   const [footerCamera, setFooterCamera] = useState<THREE.PerspectiveCamera | null>(null);
@@ -39,7 +41,7 @@ export default function Home() {
     newFooterCamera.position.set(0, 0, 1.3);
     setFooterCamera(newFooterCamera);
 
-    setDpr(Math.min(window.devicePixelRatio, 6));
+    setDpr(Math.min(window.devicePixelRatio, 3));
   }, []);
 
   if (!topCamera || !footerCamera) {
@@ -61,6 +63,7 @@ export default function Home() {
         <Canvas 
           camera={topCamera} 
           dpr={dpr}
+          flat
           style={{ pointerEvents: 'none' }}
           eventSource={typeof window !== 'undefined' ? document.documentElement : undefined}
           eventPrefix="client"
