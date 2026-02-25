@@ -12,6 +12,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import ContactSection from "@/components/ContactSection";
 import ScrollUp from "@/components/ScrollUp";
 
+//comentario para commitar direito
+
 export default function Home() {
   const [topCamera, setTopCamera] = useState<THREE.PerspectiveCamera | null>(null);
   const [footerCamera, setFooterCamera] = useState<THREE.PerspectiveCamera | null>(null);
