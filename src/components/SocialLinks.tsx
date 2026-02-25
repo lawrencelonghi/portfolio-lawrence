@@ -1,5 +1,5 @@
 'use client'
-import { Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin, Download } from 'lucide-react';
 
 export const SocialLinks = () => {
   return (
@@ -17,7 +17,7 @@ export const SocialLinks = () => {
       </a>
       
       <span className='text-3xl font-thin text-white/30'>|</span>
-      
+       
       <a 
         href='https://www.linkedin.com/in/lawrence-longhi'
         target="_blank"
@@ -29,6 +29,7 @@ export const SocialLinks = () => {
           className="text-white/70 group-hover:text-white group-hover:fill-white transition-colors duration-300"
         />
       </a>
+
     </div>
   )
 }

@@ -43,7 +43,7 @@ export const worksData: WorkData[] =
     roleKey: "fullStackDeveloper",
     projectLink: "https://ricktadeu.com.br",
     displayedLink: "ricktadeu.com.br",
-    images: [ "/imgs/rick-img.png"],
+    images: [ "/imgs/rick-horizontal.png"],
     challengesKey: "rickChallenges",
     solutionKey: "rickSolution",
     resultsKey: "rickResults"

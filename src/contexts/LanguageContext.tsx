@@ -8,6 +8,7 @@ type Translations = {
   [key in Language]: {
     // Navegação
     selectedProjects: string
+    resume: string
     developer: string
     projects: string
     aboutMe: string
@@ -65,6 +66,7 @@ const translations: Translations = {
   pt: {
     // Navegação
     developer: 'Desenvolvedor Full Stack',
+    resume: 'Baixar currículo',
     projects: 'projetos',
     selectedProjects: 'projetos selecionados',
     about: 'sobre',
@@ -118,6 +120,7 @@ const translations: Translations = {
   en: {
     // Navegação
     developer: 'Full Stack Developer',
+    resume: 'Download resume',
     projects: 'projects',
     selectedProjects: 'selected projects',
     aboutMe: 'about me',
@@ -171,6 +174,7 @@ const translations: Translations = {
   fr: {
     // Navegação
     developer: 'Développeur Full Stack',
+    resume: 'Télécharger mon CV',
     projects: 'projets',
     selectedProjects: 'projets sélectionnées',
     about: 'à propos',

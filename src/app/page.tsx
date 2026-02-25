@@ -8,6 +8,7 @@ import { BackgroundFooter } from "@/components/three/BackgroundFooter";
 import { SocialLinks } from "@/components/SocialLinks";
 import WorkSection from "@/components/WorkSection";
 import AboutSection from "@/components/AboutSection";
+import DownloadCV from "@/components/DownloadCV";
 import { useLanguage } from "@/contexts/LanguageContext";
 import ContactSection from "@/components/ContactSection";
 import ScrollUp from "@/components/ScrollUp";
@@ -93,6 +94,7 @@ export default function Home() {
               {t.developer}
             </p>
             <SocialLinks/>
+            <DownloadCV/>
           </div>
         </div>
       </div>
