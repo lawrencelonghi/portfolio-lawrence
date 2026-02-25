@@ -38,7 +38,7 @@ const AboutSection = () => {
         ease: "none",
         scrollTrigger: {
           trigger: paragraphContainerRef.current,
-          start: "top 90%",
+          start: "top 120%",
           end: "top 40%",
           scrub: 1,
         }
