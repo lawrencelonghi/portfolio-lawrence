@@ -16,6 +16,7 @@ export interface WorkData {
   client?: string;
   roleKey: string;
   projectLink: string;
+  displayedLink: string;
   githubLink?: string;
   images: string[];
   challengesKey?: string;
@@ -33,7 +34,7 @@ export const worksData: WorkData[] =
     hrefIn: "/rick",
     slug: "rick",
     description: "rickShortDescription",
-    image: "/imgs/rick1.jpeg",
+    image: "/imgs/rick-horizontal.png",
     hoverImage: "/imgs/rick-img.png",
     descriptionKey: "rickFullDescription",
     technologies: ["React", "TypeScript", "Node.js", "Express", "Tailwind CSS","Sqlite3", "Prisma", "Docker"],
@@ -41,6 +42,7 @@ export const worksData: WorkData[] =
     client: "Rick Tadeu",
     roleKey: "fullStackDeveloper",
     projectLink: "https://ricktadeu.com.br",
+    displayedLink: "ricktadeu.com.br",
     images: [ "/imgs/rick-img.png"],
     challengesKey: "rickChallenges",
     solutionKey: "rickSolution",
@@ -53,13 +55,14 @@ export const worksData: WorkData[] =
     slug: "bookd",
     title: "projectbookd.vercel.app",
     description: "bookdShortDescription",
-    image: "/imgs/kubrikCover.jpg",
+    image: "/imgs/booked-horizontal.png",
     hoverImage: "/imgs/bookd-img.png",
     descriptionKey: "bookdFullDescription",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL"],
     year: "2025",
     roleKey: "fullStackDeveloper",
     projectLink: "https://projectbookd.vercel.app",
+    displayedLink: "projectbookd.vercel.app",
     images: [
       "/imgs/bookd-img.png"
     ],
@@ -74,7 +77,7 @@ export const worksData: WorkData[] =
     slug: "samambaia",
     title: "samambaiabar.com.br",
     description: "samambaiaShortDescription",
-    image: "/imgs/drink-sour.jpg",
+    image: "/imgs/samambaia-horizontal.png",
     hoverImage: "/imgs/samambaia-nv.png",
     descriptionKey: "samambaiaFullDescription",
     technologies: ["HTML", "CSS", "JavaScript", "Node.js", "Express.js", "SQLite", "Docker"],
@@ -82,6 +85,7 @@ export const worksData: WorkData[] =
     client: "Samambaia Bar e Lanches",
     roleKey: "fullStackDeveloper",
     projectLink: "https://samambaiabar.com.br",
+    displayedLink: "samambaiabar.com.br",
     images: [
       "/imgs/samambaia-nv.png"
     ],
