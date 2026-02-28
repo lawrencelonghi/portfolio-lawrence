@@ -44,7 +44,7 @@ useGSAP(() => {
         </h1>
       </div>
       
-      <div ref={worksContainerRef} className="flex gap-10 justify-center">
+      <div ref={worksContainerRef} className="md:flex gap-10 justify-center">
         {worksData.map((work, index) => (
           <div key={work.id}>
             <Work
