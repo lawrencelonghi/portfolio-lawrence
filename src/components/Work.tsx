@@ -15,7 +15,7 @@ const Work = (work: {
   const { t } = useLanguage();
   
   return (
-    <div className="flex flex-col w-full border border-white/10 rounded-2xl overflow-hidden">
+    <div className="flex flex-col w-full mb-6 md:mb-0 border border-white/10 rounded-2xl overflow-hidden">
       <Link href={`/projects/${work.slug}`}>
       <div>
           <Image
