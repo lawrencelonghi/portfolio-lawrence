@@ -24,6 +24,7 @@ type Translations = {
     rickShortDescription: string
     bookdShortDescription: string
     samambaiaShortDescription: string
+    hireupShortDescription: string
     
     // Roles
     fullStackDeveloper: string
@@ -44,6 +45,11 @@ type Translations = {
     samambaiaFullDescription: string
     samambaiaChallenges: string
     samambaiaSolution: string
+
+    // Projetos - HireUp
+    hireupFullDescription: string
+    hireupChallenges: string
+    hireupSolution: string
    
     
     // Labels da página de projeto
@@ -85,8 +91,9 @@ const translations: Translations = {
 
     // Short project descriptions
     rickShortDescription: "Portfolio para um maquiador desenvolvido com React, TypeScript, Node.js e Express.",
-    bookdShortDescription: "Um projeto de avaliação de livros desenvolvido com Next.js, Tailwind CSS e TypeScript.",
+    bookdShortDescription: "Um projeto de avaliação de livros desenvolvido com Next.js, Tailwind e TypeScript.",
     samambaiaShortDescription:  "Um cardápio digital mobile desenvolvido com JavaScript, TypeScript e Express",    
+    hireupShortDescription: "Site e sistema para uma empresa de recrutamento desenvolvido com Javascript, Go e Gin",
 
     // Rick
     rickFullDescription: 'Portfolio profissional desenvolvido para o maquiador Rick Tadeu, apresentando seu trabalho de forma elegante, minimalista e funcional, como solicitado pelo cliente. O projeto combina uma interface moderna em React com um backend robusto em Node.js e Express. O cliente tem acesso a uma  página admin onde o cliente pode adicionar, remover e editar fotos e vídeos.',
@@ -102,6 +109,11 @@ const translations: Translations = {
     samambaiaFullDescription: 'Cardápio digital mobile interativo para o Samambaia Bar e Lanches, oferecendo uma experiência moderna e intuitiva para visualização de drinks e pratos. Desenvolvido com tecnologias web fundamentais.',
     samambaiaChallenges: 'Desenvolver um cardápio digital que fosse fácil de atualizar pelo cliente e que funcionasse perfeitamente em dispositivos móveis, considerando que a maioria dos acessos seria de smartphones. Eu precisaria criar um painel admin amigável para o cliente gerenciar os itens do cardápio.',
     samambaiaSolution: 'Criei um painel administrativo minimalista para gerenciamento do cardápio e implementei um design mobile-first com HTML, CSS e JavaScript. O backend em Node.js e Express gerencia o armazenamento e a atualização dos itens do cardápio.',
+
+    //hireup
+    hireupFullDescription: 'Site e sistema, ainda em desenvolvimento, para uma empresa de recrutamento. No site, além das informações sobre a empresa os usuários podem enviar mensagens através da página de contato.',
+    hireupChallenges: 'Estou tendo alguns desafios interessantes. A empresa pediu para que o sistema seja criado com recursos muito limitados. Outro desafio foi que os administradores do site precisariam acessar o painel admin frequentemente para verificar novas mensagens o que não é eficiente.',
+    hireupSolution: 'Devido ao limite de recursos decidi construir o backend usando Go e Gin, para otimizar a performance do sistema. Foi um desafio e uma oportunidade muito boa para entrar em contato com uma linguagem diferente da que estou acostumado. Também desenvolvi um sistema de notificão por e-mail para avisar os administradores do site que novas mensagens de clientes foram enviadas.',
     
     // Labels
     viewProject: 'Ver projeto',
@@ -139,8 +151,9 @@ const translations: Translations = {
 
     // Short project descriptions
     rickShortDescription: "A professional portfolio for a makeup artist developed with React, TypeScript, Node.js and Express.",
-    bookdShortDescription: "A book review project developed with Next.js, Tailwind CSS, and TypeScript.",
+    bookdShortDescription: "A book review project developed with Next.js, Tailwind, and TypeScript.",
     samambaiaShortDescription: "A mobile digital menu developed with JavaScript, TypeScript, and Express.",
+    hireupShortDescription: "Website and system built for a recruitment company using JavaScript, Tailwind, Go, and Gin",
   
     // Rick
     rickFullDescription: 'Professional portfolio developed for makeup artist Rick Tadeu, showcasing his work in an elegant, minimalist and functional way, as required by the client. The project combines a modern React interface with a robust Node.js and Express backend.',
@@ -156,6 +169,11 @@ const translations: Translations = {
     samambaiaFullDescription: 'Interactive digital mobile menu for Samambaia Bar e Lanches, offering a modern and intuitive experience for the restaurant clients. Developed with fundamental web technologies.',
     samambaiaChallenges: 'Develop a digital menu that was easy for the client to update and worked perfectly on mobile devices, considering that most accesses would be from smartphones. I needed to create an user-friendly admin panel for the client to manage the menu items.',
     samambaiaSolution: 'I created a minimalist admin panel for menu management and implemented a mobile-first design with smooth animations in vanilla JavaScript. The Node.js and Express backend manages the storage and updating of menu items.',
+
+    //hireup
+    hireupFullDescription: "Website and system still under development for a recruitment company. In addition to information about the company, the website allows users to send messages through the contact page.",
+    hireupChallenges: "I faced some interesting challenges. The company requested that the system be built with very limited resources. Another challenge was that the site administrators needed to frequently access the admin panel to check for new messages, which is not efficient.",
+    hireupSolution: "Due to the limited resources, I decided to build the backend using Go and Gin to optimize system performance. It was both a challenge and a great opportunity to work with a language different from the one I was used to. I also developed an email notification system to alert site administrators whenever new messages from clients were submitted.",
     
     // Labels
     viewProject: 'View project',
@@ -193,39 +211,45 @@ const translations: Translations = {
 
     // Short project descriptions
     rickShortDescription: "Portfolio pour un maquilleur développé avec React, TypeScript, Node.js et Express.",
-    bookdShortDescription: "Un projet d’évaluation de livres développé avec Next.js, Tailwind CSS et TypeScript.",
-    samambaiaShortDescription: "Un menu mobile développé avec JavaScript, TypeScript et Express.",
+    bookdShortDescription: "Un projet d’évaluation de livres développé avec Next.js, Tailwind et TypeScript.",
+    samambaiaShortDescription: "Un menu mobile développé avec JavaScript,CSS, TypeScript et Express.",
+    hireupShortDescription: "Site web et système conçus pour une entreprise de recrutement utilisant JavaScript, Go et Gin",
 
     
   // Rick
-rickFullDescription: "Portfolio professionnel développé pour le maquilleur Rick Tadeu, mettant en valeur son travail de manière élégante, minimaliste et fonctionnelle, conformément aux exigences du client. Le projet combine une interface React moderne avec un backend robuste en Node.js et Express.",
-rickChallenges: "Le principal défi a été d’intégrer la page d’accueil, la page d’administration avec le backend et la base de données. Il était nécessaire de créer une galerie de photos et de vidéos mettant en valeur le travail du maquilleur de manière professionnelle, en reflétant son style et sa personnalité, ainsi qu’une page d’administration intuitive et facile à utiliser.",
-rickSolution: "Le frontend en React et TailwindCSS garantit de bonnes performances et une excellente ergonomie pour les utilisateurs comme pour le client. Le layoyt bento grid, demandée par le client, a été réalisée avec peu de lignes de CSS, offrant une économie significative de ressources. En utilisant Node.js et Express, j’ai pu créer un backend robuste et personnalisé pour le projet.",
+  rickFullDescription: "Portfolio professionnel développé pour le maquilleur Rick Tadeu, mettant en valeur son travail de manière élégante, minimaliste et fonctionnelle, conformément aux exigences du client. Le projet combine une interface React moderne avec un backend robuste en Node.js et Express.",
+  rickChallenges: "Le principal défi a été d’intégrer la page d’accueil, la page d’administration avec le backend et la base de données. Il était nécessaire de créer une galerie de photos et de vidéos mettant en valeur le travail du maquilleur de manière professionnelle, en reflétant son style et sa personnalité, ainsi qu’une page d’administration intuitive et facile à utiliser.",
+  rickSolution: "Le frontend en React et TailwindCSS garantit de bonnes performances et une excellente ergonomie pour les utilisateurs comme pour le client. Le layoyt bento grid, demandée par le client, a été réalisée avec peu de lignes de CSS, offrant une économie significative de ressources. En utilisant Node.js et Express, j’ai pu créer un backend robuste et personnalisé pour le projet.",
 
-// Bookd
-bookdFullDescription: "Bookd est une plateforme, encore en cours de développement, dédiée à la critique et à la découverte de livres, permettant aux utilisateurs d’organiser leurs lectures et de faciliter la recherche de nouveaux livres à lire.",
-bookdChallenges: "Dans ce projet personnel, j’ai développé un système de connexion permettant à chaque utilisateur de stocker les livres en cours de lecture, ceux qu’il souhaite lire et ceux déjà lus. Le principal défi a été la gestion des routes et des connexions à la base de données. J’ai également pour objectif de transformer ce projet en une plateforme sociale où les utilisateurs pourront se suivre et partager leurs opinions sur les livres.",
-bookdSolution: "J’ai développé l’application en fullstack avec Next.js, que j’étudiais à ce moment-là. La base de données utilisée était PostgreSQL. J’ai choisi cette base de données car, dans mes projets précédents, je n’avais travaillé qu’avec SQLite et j’ai décidé de me challenger en utilisant une base de données plus robuste.",
+  // Bookd
+  bookdFullDescription: "Bookd est une plateforme, encore en cours de développement, dédiée à la critique et à la découverte de livres, permettant aux utilisateurs d’organiser leurs lectures et de faciliter la recherche de nouveaux livres à lire.",
+  bookdChallenges: "Dans ce projet personnel, j’ai développé un système de connexion permettant à chaque utilisateur de stocker les livres en cours de lecture, ceux qu’il souhaite lire et ceux déjà lus. Le principal défi a été la gestion des routes et des connexions à la base de données. J’ai également pour objectif de transformer ce projet en une plateforme sociale où les utilisateurs pourront se suivre et partager leurs opinions sur les livres.",
+  bookdSolution: "J’ai développé l’application en fullstack avec Next.js, que j’étudiais à ce moment-là. La base de données utilisée était PostgreSQL. J’ai choisi cette base de données car, dans mes projets précédents, je n’avais travaillé qu’avec SQLite et j’ai décidé de me challenger en utilisant une base de données plus robuste.",
 
-// Samambaia
-samambaiaFullDescription: "Menu mobile interactif pour le Samambaia Bar e Lanches, offrant une expérience moderne et intuitive aux clients du restaurant. Développé avec des technologies web fondamentales.",
-samambaiaChallenges: "Développer un menu facile à mettre à jour pour le client et parfaitement fonctionnel sur les appareils mobiles, étant donné que la majorité des accès se ferait via des smartphones. Il a été nécessaire de créer un panneau d’administration convivial pour permettre au client de gérer les éléments du menu.",
-samambaiaSolution: "J’ai créé un panneau d’administration minimaliste pour la gestion du menu et mis en place un design mobile-first avec des animations fluides en JavaScript vanilla. Le backend en Node.js et Express gère le stockage et la mise à jour des éléments du menu.",
+  // Samambaia
+  samambaiaFullDescription: "Menu mobile interactif pour le Samambaia Bar e Lanches, offrant une expérience moderne et intuitive aux clients du restaurant. Développé avec des technologies web fondamentales.",
+  samambaiaChallenges: "Développer un menu facile à mettre à jour pour le client et parfaitement fonctionnel sur les appareils mobiles, étant donné que la majorité des accès se ferait via des smartphones. Il a été nécessaire de créer un panneau d’administration convivial pour permettre au client de gérer les éléments du menu.",
+  samambaiaSolution: "J’ai créé un panneau d’administration minimaliste pour la gestion du menu et mis en place un design mobile-first avec des animations fluides en JavaScript vanilla. Le backend en Node.js et Express gère le stockage et la mise à jour des éléments du menu.",
+
+  // Hireup
+  hireupFullDescription: "Site web et système encore en cours de développement pour une entreprise de recrutement. En plus des informations sur l’entreprise, le site permet aux utilisateurs d’envoyer des messages via la page de contact.",
+  hireupChallenges: "J’ai rencontré plusieurs défis intéressants. L’entreprise a demandé que le système soit développé avec des ressources très limitées. Un autre défi était que les administrateurs du site devaient accéder fréquemment au panneau d’administration pour vérifier les nouveaux messages, ce qui n’est pas efficace.",
+  hireupSolution: "En raison des ressources limitées, j’ai décidé de développer le backend en utilisant Go et Gin afin d’optimiser les performances du système. Cela a été à la fois un défi et une excellente opportunité de travailler avec un langage différent de celui auquel j’étais habitué. J’ai également développé un système de notification par e-mail pour informer les administrateurs du site lorsque de nouveaux messages de clients étaient envoyés.",
 
     
-    // Labels
-    viewProject: 'Voir le projet',
-    code: 'Code',
-    technologies: 'Technologies',
-    year: 'Année',
-    role: 'Rôle',
-    client: 'Client',
-    challenges: 'Défis',
-    solution: 'Solution',
-    backToProjects: 'Voir tous les projets',
-    nextProject: 'Projet suivant',
-    projectNotFound: 'Projet non trouvé',
-    back: 'Retour',
+  // Labels
+  viewProject: 'Voir le projet',
+  code: 'Code',
+  technologies: 'Technologies',
+  year: 'Année',
+  role: 'Rôle',
+  client: 'Client',
+  challenges: 'Défis',
+  solution: 'Solution',
+  backToProjects: 'Voir tous les projets',
+  nextProject: 'Projet suivant',
+  projectNotFound: 'Projet non trouvé',
+  back: 'Retour',
   }
 }
 

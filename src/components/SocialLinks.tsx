@@ -12,7 +12,7 @@ export const SocialLinks = () => {
       >
         <Github 
           size={'20px'} 
-          className="text-white/70 group-hover:text-white group-hover:fill-white transition-colors duration-300"
+          className="text-white/70 group-hover:text-white group-hover:fill-white transition-colors duration-500"
         />
       </a>
       
@@ -26,7 +26,7 @@ export const SocialLinks = () => {
       >
         <Linkedin 
           size={'20px'} 
-          className="text-white/70 group-hover:text-white group-hover:fill-white transition-colors duration-300"
+          className="text-white/70 group-hover:text-white group-hover:fill-white transition-all duration-500"
         />
       </a>
 

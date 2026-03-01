@@ -92,5 +92,26 @@ export const worksData: WorkData[] =
     challengesKey: "samambaiaChallenges",
     solutionKey: "samambaiaSolution",
     resultsKey: "samambaiaResults"
+  },
+    {
+    id: 4,
+    title: "hireupsolutions.com.br",
+    hrefEx: "https://hireupsolutions.com.br",
+    hrefIn: "/hireup",
+    slug: "hireup",
+    description: "hireupShortDescription",
+    image: "/imgs/hireup-horizontal.png",
+    hoverImage: "",
+    descriptionKey: "hireupFullDescription",
+    technologies: ["Javascript","tailwind", "Go","Gin", "Docker"],
+    year: "2026",
+    client: "HireUp Solutions",
+    roleKey: "fullStackDeveloper",
+    projectLink: "https://hireupsolutions.com.br",
+    displayedLink: "hireupsolutions.com.br",
+    images: [ "/imgs/hireup-horizontal.png"],
+    challengesKey: "hireupChallenges",
+    solutionKey: "hireupSolution",
+    resultsKey: "hireuptResults"
   }
 ];
